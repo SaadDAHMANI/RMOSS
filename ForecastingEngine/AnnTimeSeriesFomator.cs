@@ -63,13 +63,26 @@ public class AnnTimeSeriesFomator
                 int dataCount = Data.Count;
                 if (dataCount < 1) { return; }
 
+                if (object.Equals(timeSeriesIndexes , null)) { throw new Exception("No time series indexes pattern are found."); }
+                if (object.Equals(timeSeriesIndexes.Data, null)) { throw new Exception("No time series indexes pattern are found."); }
+
+                if (timeSeriesIndexes.Max > dataCount) { throw new Exception("Index great then data serie count."); }
+
                 TrainingCount = (int)((TrainingRate * dataCount) / 100);
                 TestingCount = (dataCount - TrainingCount);
 
                 mTrainingInputs = new DataSerieTD() { Name = "Training inputs" };
                 mTrainingOutputs = new DataSerie1D() { Name = "Training outputs" };
 
+                timeSeriesIndexes.SortReverse();
 
+                int[] indexes = new int[timeSeriesIndexes.Count]; 
+
+                for (int i=0; i < timeSeriesIndexes.Count;i++)
+                {
+                    indexes[i] = (int)timeSeriesIndexes.Data[i].X_Value;
+                }
+               
 
 
             }

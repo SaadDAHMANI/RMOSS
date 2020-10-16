@@ -293,6 +293,8 @@ Public Class AnnEoForm
         End If
         NeuralNetEO.LayersStruct = NeuralNetworksEngine.GetLayersStruct(NeuralNetStructure, NeuralNetEO.InputsCount, NeuralNetEO.OuputsCount)
         NeuralNetEO.MaxIterationCount = 100
+        NeuralNetEO.ActivationFunction = ActivationFunctionEnum.SigmoidFunction
+        NeuralNetEO.LearningAlgorithm = LearningAlgorithmEnum.LevenbergMarquardtLearning
         PrtyGrdNeuralNet.SelectedObject = NeuralNetEO
 
         '---------------------------------------------------
@@ -307,14 +309,28 @@ Public Class AnnEoForm
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnFormateDataSerie.Click
 
+        Dim tsIndexes As New DataSerie1D()
+        With tsIndexes
+            .Add("12", 12)
+            .Add("2", 2)
+            .Add("6", 6)
+            .Add("3", 3)
+            .Add("1", 1)
+
+
+        End With
+
         With AnnDataFormator
             .Data = DataSerie
+            .Formate(tsIndexes)
             .Formate() 'Simple format.
             '.Formate(True, 9) 'Formating including time in month
 
         End With
         DrawDataGraphic(AnnDataFormator.Training_Outputs, Chart1)
         DrawDataGraphic(AnnDataFormator.Testing_Outputs, Chart2)
+
+
     End Sub
 
     Private Sub BtnLuanchTraining_Click(sender As Object, e As EventArgs) Handles BtnLuanchTraining.Click

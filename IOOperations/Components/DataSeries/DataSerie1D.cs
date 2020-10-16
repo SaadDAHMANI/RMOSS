@@ -321,6 +321,32 @@ namespace IOOperations.Components
 
             return result;
         }
+        /// <summary>
+        /// Ascendant sorting.
+        /// </summary>
+        public void Sort()
+        {
+            if (object.Equals(Data, null)) { return; }
+            Data.Sort(delegate(DataItem1D item1, DataItem1D item2)
+            {
+                if (item1.X_Value == item2.X_Value) { return 0; }
+                else if(item1.X_Value < item2.X_Value) { return -1; }
+                else { return 1; }
+            });
+        }
+        /// <summary>
+        /// Descendant sorting.
+        /// </summary>
+        public void SortReverse()
+        {
+            if (object.Equals(Data, null)) { return; }
+            Data.Sort(delegate (DataItem1D item1, DataItem1D item2)
+            {
+                if (item1.X_Value == item2.X_Value) { return 0; }
+                else if (item1.X_Value < item2.X_Value) { return 1; }
+                else { return -1; }
+            });
+        }
       
     }
 }
