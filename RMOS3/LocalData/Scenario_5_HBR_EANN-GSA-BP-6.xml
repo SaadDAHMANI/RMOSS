@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<RMOSProject Version="1.0" FileVersion="1.0" ProjectName="" Description="" CreateDate="3/16/2020 6:13:55 PM">
+  <Reservoir Name="HBR-Tlemcen" Description="Hammam Boughrara" MinCapacity="0" MaxCapacity="10" MinRelease="0" MaxRelease="0">
+    <Curve_Elevation_Area Name="Boughrara Elevation - Surface (H-S) / /" Description="/" Title="DS-2" X_Title="X" Y_Title="Y" Count="16">
+      <Title x="0" y="0">/</Title>
+      <Title x="3" y="9.6">/</Title>
+      <Title x="8" y="40">/</Title>
+      <Title x="13" y="93.7">/</Title>
+      <Title x="18" y="165.1">/</Title>
+      <Title x="23" y="226">/</Title>
+      <Title x="28" y="298.7">/</Title>
+      <Title x="33" y="400">/</Title>
+      <Title x="38" y="501.8">/</Title>
+      <Title x="43" y="611.9">/</Title>
+      <Title x="48" y="748.4">/</Title>
+      <Title x="53" y="893.6">/</Title>
+      <Title x="58" y="1038.4">/</Title>
+      <Title x="63" y="1207.5">/</Title>
+      <Title x="68" y="1356.7">/</Title>
+      <Title x="73" y="1577.9">/</Title>
+    </Curve_Elevation_Area>
+    <Curve_Elevation_Volume Name="Boughrara Elevation - Volume (H-V) / /" Description="/" Title="DS-2" X_Title="X" Y_Title="Y" Count="16">
+      <Title x="0" y="0">/</Title>
+      <Title x="3" y="0.14">/</Title>
+      <Title x="8" y="1.38">/</Title>
+      <Title x="13" y="4.73">/</Title>
+      <Title x="18" y="11.2">/</Title>
+      <Title x="23" y="20.97">/</Title>
+      <Title x="28" y="34.09">/</Title>
+      <Title x="33" y="51.56">/</Title>
+      <Title x="38" y="74.1">/</Title>
+      <Title x="43" y="101.95">/</Title>
+      <Title x="48" y="135.95">/</Title>
+      <Title x="53" y="177">/</Title>
+      <Title x="58" y="225.3">/</Title>
+      <Title x="63" y="281.45">/</Title>
+      <Title x="68" y="345.56">/</Title>
+      <Title x="73" y="418.92">/</Title>
+    </Curve_Elevation_Volume>
+    <Evaporation Name="Boughrara Evaporation Rates (Monthly) / /" Description="/" Title="DS-2" X_Title="X" Y_Title="Y" Count="12">
+      <Title x="1" y="0.05">/</Title>
+      <Title x="2" y="0.074">/</Title>
+      <Title x="3" y="0.08">/</Title>
+      <Title x="4" y="0.093">/</Title>
+      <Title x="5" y="0.145">/</Title>
+      <Title x="6" y="0.173">/</Title>
+      <Title x="7" y="0.2">/</Title>
+      <Title x="8" y="0.212">/</Title>
+      <Title x="9" y="0.14">/</Title>
+      <Title x="10" y="0.095">/</Title>
+      <Title x="11" y="0.062">/</Title>
+      <Title x="12" y="0.05">/</Title>
+    </Evaporation>
+    <Infiltration Name="n/a" Count="0" />
+    <Inflow Name="Inflow HBR (Scenario 1)" Description="Scenario 1 with EANN-GSA-BP-6 (7,11)" Title="Month" X_Title="Inflow Q [Mm3]" Count="120">
+      <Title x="0.003814983">17-Jan</Title>
+      <Title x="6.79E-05">17-Feb</Title>
+      <Title x="1.59E-06">17-Mar</Title>
+      <Title x="0.000110116">17-Apr</Title>
+      <Title x="0.000400047">17-May</Title>
+      <Title x="0.00055849">17-Jun</Title>
+      <Title x="0.00152627">17-Jul</Title>
+      <Title x="0.026092777">17-Aug</Title>
+      <Title x="0.5981256">17-Sep</Title>
+      <Title x="2.472853082">17-Oct</Title>
+      <Title x="3.640570004">17-Nov</Title>
+      <Title x="3.913312261">17-Dec</Title>
+      <Title x="0.000343723">18-Jan</Title>
+      <Title x="0.001425306">18-Feb</Title>
+      <Title x="2.57E-05">18-Mar</Title>
+      <Title x="0.000123948">18-Apr</Title>
+      <Title x="0.000415607">18-May</Title>
+      <Title x="0.000579492">18-Jun</Title>
+      <Title x="0.001526364">18-Jul</Title>
+      <Title x="0.0261016">18-Aug</Title>
+      <Title x="0.598130562">18-Sep</Title>
+      <Title x="2.472863001">18-Oct</Title>
+      <Title x="3.640572524">18-Nov</Title>
+      <Title x="3.913312805">18-Dec</Title>
+      <Title x="0.000343728">19-Jan</Title>
+      <Title x="0.001425287">19-Feb</Title>
+      <Title x="2.57E-05">19-Mar</Title>
+      <Title x="0.000123948">19-Apr</Title>
+      <Title x="0.000415607">19-May</Title>
+      <Title x="0.000579492">19-Jun</Title>
+      <Title x="0.001526364">19-Jul</Title>
+      <Title x="0.0261016">19-Aug</Title>
+      <Title x="0.598130562">19-Sep</Title>
+      <Title x="2.472863001">19-Oct</Title>
+      <Title x="3.640572524">19-Nov</Title>
+      <Title x="3.913312805">19-Dec</Title>
+      <Title x="0.000343728">20-Jan</Title>
+      <Title x="0.001425287">20-Feb</Title>
+      <Title x="2.57E-05">20-Mar</Title>
+      <Title x="0.000123948">20-Apr</Title>
+      <Title x="0.000415607">20-May</Title>
+      <Title x="0.000579492">20-Jun</Title>
+      <Title x="0.001526364">20-Jul</Title>
+      <Title x="0.0261016">20-Aug</Title>
+      <Title x="0.598130562">20-Sep</Title>
+      <Title x="2.472863001">20-Oct</Title>
+      <Title x="3.640572524">20-Nov</Title>
+      <Title x="3.913312805">20-Dec</Title>
+      <Title x="0.000343728">21-Jan</Title>
+      <Title x="0.001425287">21-Feb</Title>
+      <Title x="2.57E-05">21-Mar</Title>
+      <Title x="0.000123948">21-Apr</Title>
+      <Title x="0.000415607">21-May</Title>
+      <Title x="0.000579492">21-Jun</Title>
+      <Title x="0.001526364">21-Jul</Title>
+      <Title x="0.0261016">21-Aug</Title>
+      <Title x="0.598130562">21-Sep</Title>
+      <Title x="2.472863001">21-Oct</Title>
+      <Title x="3.640572524">21-Nov</Title>
+      <Title x="3.913312805">21-Dec</Title>
+      <Title x="0.000343728">22-Jan</Title>
+      <Title x="0.001425287">22-Feb</Title>
+      <Title x="2.57E-05">22-Mar</Title>
+      <Title x="0.000123948">22-Apr</Title>
+      <Title x="0.000415607">22-May</Title>
+      <Title x="0.000579492">22-Jun</Title>
+      <Title x="0.001526364">22-Jul</Title>
+      <Title x="0.0261016">22-Aug</Title>
+      <Title x="0.598130562">22-Sep</Title>
+      <Title x="2.472863001">22-Oct</Title>
+      <Title x="3.640572524">22-Nov</Title>
+      <Title x="3.913312805">22-Dec</Title>
+      <Title x="0.000343728">23-Jan</Title>
+      <Title x="0.001425287">23-Feb</Title>
+      <Title x="2.57E-05">23-Mar</Title>
+      <Title x="0.000123948">23-Apr</Title>
+      <Title x="0.000415607">23-May</Title>
+      <Title x="0.000579492">23-Jun</Title>
+      <Title x="0.001526364">23-Jul</Title>
+      <Title x="0.0261016">23-Aug</Title>
+      <Title x="0.598130562">23-Sep</Title>
+      <Title x="2.472863001">23-Oct</Title>
+      <Title x="3.640572524">23-Nov</Title>
+      <Title x="3.913312805">23-Dec</Title>
+      <Title x="0.000343728">24-Jan</Title>
+      <Title x="0.001425287">24-Feb</Title>
+      <Title x="2.57E-05">24-Mar</Title>
+      <Title x="0.000123948">24-Apr</Title>
+      <Title x="0.000415607">24-May</Title>
+      <Title x="0.000579492">24-Jun</Title>
+      <Title x="0.001526364">24-Jul</Title>
+      <Title x="0.0261016">24-Aug</Title>
+      <Title x="0.598130562">24-Sep</Title>
+      <Title x="2.472863001">24-Oct</Title>
+      <Title x="3.640572524">24-Nov</Title>
+      <Title x="3.913312805">24-Dec</Title>
+      <Title x="0.000343728">25-Jan</Title>
+      <Title x="0.001425287">25-Feb</Title>
+      <Title x="2.57E-05">25-Mar</Title>
+      <Title x="0.000123948">25-Apr</Title>
+      <Title x="0.000415607">25-May</Title>
+      <Title x="0.000579492">25-Jun</Title>
+      <Title x="0.001526364">25-Jul</Title>
+      <Title x="0.0261016">25-Aug</Title>
+      <Title x="0.598130562">25-Sep</Title>
+      <Title x="2.472863001">25-Oct</Title>
+      <Title x="3.640572524">25-Nov</Title>
+      <Title x="3.913312805">25-Dec</Title>
+      <Title x="0.000343728">26-Jan</Title>
+      <Title x="0.001425287">26-Feb</Title>
+      <Title x="2.57E-05">26-Mar</Title>
+      <Title x="0.000123948">26-Apr</Title>
+      <Title x="0.000415607">26-May</Title>
+      <Title x="0.000579492">26-Jun</Title>
+      <Title x="0.001526364">26-Jul</Title>
+      <Title x="0.0261016">26-Aug</Title>
+      <Title x="0.598130562">26-Sep</Title>
+      <Title x="2.472863001">26-Oct</Title>
+      <Title x="3.640572524">26-Nov</Title>
+      <Title x="3.913312805">26-Dec</Title>
+    </Inflow>
+    <Downstream Name="HBR-Demands [2017-2026]" Description="Mod�le de demandes mensuelles pr�vues (Janvier-2017 au D�cembre 2026) " Title="Month" X_Title="Demand(Mm3)" Count="120">
+      <Title x="2.22">Jan-17</Title>
+      <Title x="2.37">Feb-17</Title>
+      <Title x="3.62">Mar-17</Title>
+      <Title x="4.62">Apr-17</Title>
+      <Title x="3.03">May-17</Title>
+      <Title x="3.85">Jun-17</Title>
+      <Title x="4.34">Jul-17</Title>
+      <Title x="4.47">Aug-17</Title>
+      <Title x="2.93">Sep-17</Title>
+      <Title x="4.06">Oct-17</Title>
+      <Title x="2.07">Nov-17</Title>
+      <Title x="2.01">Dec-17</Title>
+      <Title x="2.43">Jan-18</Title>
+      <Title x="2.6">Feb-18</Title>
+      <Title x="4.03">Mar-18</Title>
+      <Title x="5.18">Apr-18</Title>
+      <Title x="3.34">May-18</Title>
+      <Title x="4.28">Jun-18</Title>
+      <Title x="4.85">Jul-18</Title>
+      <Title x="5">Aug-18</Title>
+      <Title x="3.23">Sep-18</Title>
+      <Title x="4.54">Oct-18</Title>
+      <Title x="2.27">Nov-18</Title>
+      <Title x="2.19">Dec-18</Title>
+      <Title x="2.83">Jan-19</Title>
+      <Title x="3.04">Feb-19</Title>
+      <Title x="4.83">Mar-19</Title>
+      <Title x="6.26">Apr-19</Title>
+      <Title x="3.95">May-19</Title>
+      <Title x="5.12">Jun-19</Title>
+      <Title x="5.83">Jul-19</Title>
+      <Title x="6.01">Aug-19</Title>
+      <Title x="3.81">Sep-19</Title>
+      <Title x="5.46">Oct-19</Title>
+      <Title x="2.62">Nov-19</Title>
+      <Title x="2.53">Dec-19</Title>
+      <Title x="3.23">Jan-20</Title>
+      <Title x="3.48">Feb-20</Title>
+      <Title x="5.62">Mar-20</Title>
+      <Title x="7.34">Apr-20</Title>
+      <Title x="4.56">May-20</Title>
+      <Title x="5.96">Jun-20</Title>
+      <Title x="6.81">Jul-20</Title>
+      <Title x="7.03">Aug-20</Title>
+      <Title x="4.39">Sep-20</Title>
+      <Title x="6.39">Oct-20</Title>
+      <Title x="2.98">Nov-20</Title>
+      <Title x="2.87">Dec-20</Title>
+      <Title x="3.63">Jan-21</Title>
+      <Title x="3.92">Feb-21</Title>
+      <Title x="6.42">Mar-21</Title>
+      <Title x="8.43">Apr-21</Title>
+      <Title x="5.16">May-21</Title>
+      <Title x="6.8">Jun-21</Title>
+      <Title x="7.79">Jul-21</Title>
+      <Title x="8.05">Aug-21</Title>
+      <Title x="4.97">Sep-21</Title>
+      <Title x="7.32">Oct-21</Title>
+      <Title x="3.34">Nov-21</Title>
+      <Title x="3.21">Dec-21</Title>
+      <Title x="3.66">Jan-22</Title>
+      <Title x="3.95">Feb-22</Title>
+      <Title x="6.45">Mar-22</Title>
+      <Title x="8.46">Apr-22</Title>
+      <Title x="5.2">May-22</Title>
+      <Title x="6.84">Jun-22</Title>
+      <Title x="7.82">Jul-22</Title>
+      <Title x="8.09">Aug-22</Title>
+      <Title x="5">Sep-22</Title>
+      <Title x="7.35">Oct-22</Title>
+      <Title x="3.37">Nov-22</Title>
+      <Title x="3.24">Dec-22</Title>
+      <Title x="3.69">Jan-23</Title>
+      <Title x="3.98">Feb-23</Title>
+      <Title x="6.48">Mar-23</Title>
+      <Title x="8.49">Apr-23</Title>
+      <Title x="5.23">May-23</Title>
+      <Title x="6.87">Jun-23</Title>
+      <Title x="7.86">Jul-23</Title>
+      <Title x="8.12">Aug-23</Title>
+      <Title x="5.03">Sep-23</Title>
+      <Title x="7.38">Oct-23</Title>
+      <Title x="3.4">Nov-23</Title>
+      <Title x="3.27">Dec-23</Title>
+      <Title x="3.72">Jan-24</Title>
+      <Title x="4.01">Feb-24</Title>
+      <Title x="6.52">Mar-24</Title>
+      <Title x="8.52">Apr-24</Title>
+      <Title x="5.27">May-24</Title>
+      <Title x="6.91">Jun-24</Title>
+      <Title x="7.89">Jul-24</Title>
+      <Title x="8.15">Aug-24</Title>
+      <Title x="5.07">Sep-24</Title>
+      <Title x="7.41">Oct-24</Title>
+      <Title x="3.43">Nov-24</Title>
+      <Title x="3.3">Dec-24</Title>
+      <Title x="3.75">Jan-25</Title>
+      <Title x="4.04">Feb-25</Title>
+      <Title x="6.55">Mar-25</Title>
+      <Title x="8.56">Apr-25</Title>
+      <Title x="5.3">May-25</Title>
+      <Title x="6.94">Jun-25</Title>
+      <Title x="7.93">Jul-25</Title>
+      <Title x="8.19">Aug-25</Title>
+      <Title x="5.1">Sep-25</Title>
+      <Title x="7.44">Oct-25</Title>
+      <Title x="3.46">Nov-25</Title>
+      <Title x="3.34">Dec-25</Title>
+      <Title x="3.97">Jan-26</Title>
+      <Title x="4.08">Feb-26</Title>
+      <Title x="6.58">Mar-26</Title>
+      <Title x="8.59">Apr-26</Title>
+      <Title x="5.34">May-26</Title>
+      <Title x="6.98">Jun-26</Title>
+      <Title x="7.97">Jul-26</Title>
+      <Title x="8.23">Aug-26</Title>
+      <Title x="5.14">Sep-26</Title>
+      <Title x="7.48">Oct-26</Title>
+      <Title x="3.5">Nov-26</Title>
+      <Title x="3.37">Dec-26</Title>
+    </Downstream>
+  </Reservoir>
+</RMOSProject>

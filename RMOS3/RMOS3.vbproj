@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F0BC96A9-AB5A-4740-8385-544C7EF23058}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>RMOS3.My.MyApplication</StartupObject>
+    <RootNamespace>RMOS3</RootNamespace>
+    <AssemblyName>RMOS3</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>RMOS3.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>RMOS3.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonForms\OptimizationForm.Designer.vb">
+      <DependentUpon>OptimizationForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CommonForms\OptimizationForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonForms\PerformanceAnalysisForm.Designer.vb">
+      <DependentUpon>PerformanceAnalysisForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CommonForms\PerformanceAnalysisForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonForms\ProjectForm.Designer.vb">
+      <DependentUpon>ProjectForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CommonForms\ProjectForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonForms\ResultsForm.Designer.vb">
+      <DependentUpon>ResultsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CommonForms\ResultsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonForms\ReportForm.Designer.vb">
+      <DependentUpon>ReportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CommonForms\ReportForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonForms\SingleGraphicForm.Designer.vb">
+      <DependentUpon>SingleGraphicForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CommonForms\SingleGraphicForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonForms\TablesForm.Designer.vb">
+      <DependentUpon>TablesForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CommonForms\TablesForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonForms\WaitingForm.Designer.vb">
+      <DependentUpon>WaitingForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CommonForms\WaitingForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataSeriesForms\DemandForm.Designer.vb">
+      <DependentUpon>DemandForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataSeriesForms\DemandForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataSeriesForms\InflowForm.Designer.vb">
+      <DependentUpon>InflowForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataSeriesForms\InflowForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainModule.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="CommonForms\GraphicsForm.Designer.vb">
+      <DependentUpon>GraphicsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CommonForms\GraphicsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NeuralNetworks\AnnEoForm.Designer.vb">
+      <DependentUpon>AnnEoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NeuralNetworks\AnnEoForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NeuralNetworks\ANNTestForm.Designer.vb">
+      <DependentUpon>ANNTestForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NeuralNetworks\ANNTestForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NeuralNetworks\NeuralNetworkForm.Designer.vb">
+      <DependentUpon>NeuralNetworkForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NeuralNetworks\NeuralNetworkForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptimizationForms\GeneticAlgo\GeneticAlgoForm.Designer.vb">
+      <DependentUpon>GeneticAlgoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OptimizationForms\GeneticAlgo\GeneticAlgoForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptimizationForms\GSAlgo\GSAGraphicsForm.Designer.vb">
+      <DependentUpon>GSAGraphicsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OptimizationForms\GSAlgo\GSAGraphicsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptimizationForms\GSAlgo\GSAlgoForm.Designer.vb">
+      <DependentUpon>GSAlgoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OptimizationForms\GSAlgo\GSAlgoForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptimizationForms\GWOAlgo\GWOAlgoForm.Designer.vb">
+      <DependentUpon>GWOAlgoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OptimizationForms\GWOAlgo\GWOAlgoForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptimizationForms\GWOAlgo\GWOGraphicsForm.Designer.vb">
+      <DependentUpon>GWOGraphicsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OptimizationForms\GWOAlgo\GWOGraphicsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptimizationForms\HybridPSOGWO\HybridPSOGWOForm.Designer.vb">
+      <DependentUpon>HybridPSOGWOForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OptimizationForms\HybridPSOGWO\HybridPSOGWOForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReservoirForms\CurvesForm.Designer.vb">
+      <DependentUpon>CurvesForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReservoirForms\CurvesForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReservoirForms\ReservoirForm.Designer.vb">
+      <DependentUpon>ReservoirForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReservoirForms\ReservoirForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CommonForms\OptimizationForm.resx">
+      <DependentUpon>OptimizationForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonForms\PerformanceAnalysisForm.resx">
+      <DependentUpon>PerformanceAnalysisForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonForms\ProjectForm.resx">
+      <DependentUpon>ProjectForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonForms\ReportForm.resx">
+      <DependentUpon>ReportForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonForms\ResultsForm.resx">
+      <DependentUpon>ResultsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonForms\SingleGraphicForm.resx">
+      <DependentUpon>SingleGraphicForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonForms\TablesForm.resx">
+      <DependentUpon>TablesForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonForms\WaitingForm.resx">
+      <DependentUpon>WaitingForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataSeriesForms\DemandForm.resx">
+      <DependentUpon>DemandForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataSeriesForms\InflowForm.resx">
+      <DependentUpon>InflowForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonForms\GraphicsForm.resx">
+      <DependentUpon>GraphicsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NeuralNetworks\AnnEoForm.resx">
+      <DependentUpon>AnnEoForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NeuralNetworks\ANNTestForm.resx">
+      <DependentUpon>ANNTestForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NeuralNetworks\NeuralNetworkForm.resx">
+      <DependentUpon>NeuralNetworkForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptimizationForms\GeneticAlgo\GeneticAlgoForm.resx">
+      <DependentUpon>GeneticAlgoForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptimizationForms\GSAlgo\GSAGraphicsForm.resx">
+      <DependentUpon>GSAGraphicsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptimizationForms\GSAlgo\GSAlgoForm.resx">
+      <DependentUpon>GSAlgoForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptimizationForms\GWOAlgo\GWOAlgoForm.resx">
+      <DependentUpon>GWOAlgoForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptimizationForms\GWOAlgo\GWOGraphicsForm.resx">
+      <DependentUpon>GWOGraphicsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptimizationForms\HybridPSOGWO\HybridPSOGWOForm.resx">
+      <DependentUpon>HybridPSOGWOForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReservoirForms\CurvesForm.resx">
+      <DependentUpon>CurvesForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReservoirForms\ReservoirForm.resx">
+      <DependentUpon>ReservoirForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LocalData\RMOSData.md" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ForecastingEngine\ForecastingEngine.csproj">
+      <Project>{7754d277-73e3-4912-a32d-ebe0dad6feb4}</Project>
+      <Name>ForecastingEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IOOperations\IOOperations.csproj">
+      <Project>{0e7fc594-7730-4b02-acce-94cde4a94c7a}</Project>
+      <Name>IOOperations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RmosEngine\RmosEngine.vbproj">
+      <Project>{1d5c689c-f864-41ca-8094-fadd45b939d0}</Project>
+      <Name>RmosEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddNewIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenProjectIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenProject48p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAsIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExitIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ANNIcone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EANNIcone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GAIcone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GSAIcone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GWOIcone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WolfIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WolfIcon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ParticulWolfIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ParticulWolfIcon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HPGIcone1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HPGIcone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wolf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application-exit-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-run-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-save-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open_load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hydro-electric-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-save-51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-save-as-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Formula.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

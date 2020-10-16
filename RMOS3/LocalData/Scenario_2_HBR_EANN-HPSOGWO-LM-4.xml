@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<RMOSProject Version="1.0" FileVersion="1.0" ProjectName="HBR-Scen2" Description="Scenario 2, inflow with : EANN-HPG-LM-4 (8,13)" CreateDate="3/16/2020 6:32:33 PM">
+  <Reservoir Name="HBR-Tlemcen" Description="Hammam Boughrara" MinCapacity="0" MaxCapacity="10" MinRelease="0" MaxRelease="0">
+    <Curve_Elevation_Area Name="Boughrara Elevation - Surface (H-S) / /" Description="/" Title="DS-2" X_Title="X" Y_Title="Y" Count="16">
+      <Title x="0" y="0" />
+      <Title x="3" y="9.6" />
+      <Title x="8" y="40" />
+      <Title x="13" y="93.7" />
+      <Title x="18" y="165.1" />
+      <Title x="23" y="226" />
+      <Title x="28" y="298.7" />
+      <Title x="33" y="400" />
+      <Title x="38" y="501.8" />
+      <Title x="43" y="611.9" />
+      <Title x="48" y="748.4" />
+      <Title x="53" y="893.6" />
+      <Title x="58" y="1038.4" />
+      <Title x="63" y="1207.5" />
+      <Title x="68" y="1356.7" />
+      <Title x="73" y="1577.9" />
+    </Curve_Elevation_Area>
+    <Curve_Elevation_Volume Name="Boughrara Elevation - Volume (H-V) / /" Description="/" Title="DS-2" X_Title="X" Y_Title="Y" Count="16">
+      <Title x="0" y="0" />
+      <Title x="3" y="0.14" />
+      <Title x="8" y="1.38" />
+      <Title x="13" y="4.73" />
+      <Title x="18" y="11.2" />
+      <Title x="23" y="20.97" />
+      <Title x="28" y="34.09" />
+      <Title x="33" y="51.56" />
+      <Title x="38" y="74.1" />
+      <Title x="43" y="101.95" />
+      <Title x="48" y="135.95" />
+      <Title x="53" y="177" />
+      <Title x="58" y="225.3" />
+      <Title x="63" y="281.45" />
+      <Title x="68" y="345.56" />
+      <Title x="73" y="418.92" />
+    </Curve_Elevation_Volume>
+    <Evaporation Name="Boughrara Evaporation Rates (Monthly) / /" Description="/" Title="DS-2" X_Title="X" Y_Title="Y" Count="12">
+      <Title x="1" y="0.05" />
+      <Title x="2" y="0.074" />
+      <Title x="3" y="0.08" />
+      <Title x="4" y="0.093" />
+      <Title x="5" y="0.145" />
+      <Title x="6" y="0.173" />
+      <Title x="7" y="0.2" />
+      <Title x="8" y="0.212" />
+      <Title x="9" y="0.14" />
+      <Title x="10" y="0.095" />
+      <Title x="11" y="0.062" />
+      <Title x="12" y="0.05" />
+    </Evaporation>
+    <Infiltration Name="DS-2" Description="/" Title="DS-2" X_Title="X" Y_Title="Y" Count="0" />
+    <Inflow Name="Inflow HBR (Scenario 2)" Description="Scenario 2, inflow with : EANN-HPG-LM-4 (8,13)" Title="Month" X_Title="Inflow Q [Mm3]" Count="120">
+      <Title x="2.03E-05">17-Jan</Title>
+      <Title x="0.306">17-Feb</Title>
+      <Title x="0.332">17-Mar</Title>
+      <Title x="1.14">17-Apr</Title>
+      <Title x="1.02">17-May</Title>
+      <Title x="1.04">17-Jun</Title>
+      <Title x="1.49">17-Jul</Title>
+      <Title x="2.12">17-Aug</Title>
+      <Title x="3.39">17-Sep</Title>
+      <Title x="6.94">17-Oct</Title>
+      <Title x="16.5">17-Nov</Title>
+      <Title x="5.83">17-Dec</Title>
+      <Title x="0.00511">18-Jan</Title>
+      <Title x="0.581">18-Feb</Title>
+      <Title x="0.000614">18-Mar</Title>
+      <Title x="0.38">18-Apr</Title>
+      <Title x="0.835">18-May</Title>
+      <Title x="0.865">18-Jun</Title>
+      <Title x="1.4">18-Jul</Title>
+      <Title x="2.05">18-Aug</Title>
+      <Title x="3.36">18-Sep</Title>
+      <Title x="7.15">18-Oct</Title>
+      <Title x="18.7">18-Nov</Title>
+      <Title x="5.52">18-Dec</Title>
+      <Title x="0.00157">19-Jan</Title>
+      <Title x="0.819">19-Feb</Title>
+      <Title x="0.35">19-Mar</Title>
+      <Title x="0.779">19-Apr</Title>
+      <Title x="0.898">19-May</Title>
+      <Title x="0.938">19-Jun</Title>
+      <Title x="1.44">19-Jul</Title>
+      <Title x="2.08">19-Aug</Title>
+      <Title x="3.38">19-Sep</Title>
+      <Title x="7.06">19-Oct</Title>
+      <Title x="18.1">19-Nov</Title>
+      <Title x="5.6">19-Dec</Title>
+      <Title x="0.00154">20-Jan</Title>
+      <Title x="0.755">20-Feb</Title>
+      <Title x="0.201">20-Mar</Title>
+      <Title x="0.552">20-Apr</Title>
+      <Title x="0.852">20-May</Title>
+      <Title x="0.894">20-Jun</Title>
+      <Title x="1.41">20-Jul</Title>
+      <Title x="2.06">20-Aug</Title>
+      <Title x="3.37">20-Sep</Title>
+      <Title x="7.11">20-Oct</Title>
+      <Title x="18.6">20-Nov</Title>
+      <Title x="5.54">20-Dec</Title>
+      <Title x="0.00151">21-Jan</Title>
+      <Title x="0.808">21-Feb</Title>
+      <Title x="0.306">21-Mar</Title>
+      <Title x="0.699">21-Apr</Title>
+      <Title x="0.88">21-May</Title>
+      <Title x="0.922">21-Jun</Title>
+      <Title x="1.43">21-Jul</Title>
+      <Title x="2.07">21-Aug</Title>
+      <Title x="3.38">21-Sep</Title>
+      <Title x="7.08">21-Oct</Title>
+      <Title x="18.3">21-Nov</Title>
+      <Title x="5.57">21-Dec</Title>
+      <Title x="0.0015">22-Jan</Title>
+      <Title x="0.778">22-Feb</Title>
+      <Title x="0.237">22-Mar</Title>
+      <Title x="0.595">22-Apr</Title>
+      <Title x="0.859">22-May</Title>
+      <Title x="0.902">22-Jun</Title>
+      <Title x="1.42">22-Jul</Title>
+      <Title x="2.06">22-Aug</Title>
+      <Title x="3.37">22-Sep</Title>
+      <Title x="7.1">22-Oct</Title>
+      <Title x="18.5">22-Nov</Title>
+      <Title x="5.54">22-Dec</Title>
+      <Title x="0.0015">23-Jan</Title>
+      <Title x="0.801">23-Feb</Title>
+      <Title x="0.287">23-Mar</Title>
+      <Title x="0.667">23-Apr</Title>
+      <Title x="0.874">23-May</Title>
+      <Title x="0.916">23-Jun</Title>
+      <Title x="1.42">23-Jul</Title>
+      <Title x="2.07">23-Aug</Title>
+      <Title x="3.37">23-Sep</Title>
+      <Title x="7.08">23-Oct</Title>
+      <Title x="18.4">23-Nov</Title>
+      <Title x="5.56">23-Dec</Title>
+      <Title x="0.00149">24-Jan</Title>
+      <Title x="0.785">24-Feb</Title>
+      <Title x="0.252">24-Mar</Title>
+      <Title x="0.616">24-Apr</Title>
+      <Title x="0.863">24-May</Title>
+      <Title x="0.906">24-Jun</Title>
+      <Title x="1.42">24-Jul</Title>
+      <Title x="2.07">24-Aug</Title>
+      <Title x="3.37">24-Sep</Title>
+      <Title x="7.1">24-Oct</Title>
+      <Title x="18.5">24-Nov</Title>
+      <Title x="5.55">24-Dec</Title>
+      <Title x="0.0015">25-Jan</Title>
+      <Title x="0.797">25-Feb</Title>
+      <Title x="0.278">25-Mar</Title>
+      <Title x="0.652">25-Apr</Title>
+      <Title x="0.87">25-May</Title>
+      <Title x="0.913">25-Jun</Title>
+      <Title x="1.42">25-Jul</Title>
+      <Title x="2.07">25-Aug</Title>
+      <Title x="3.37">25-Sep</Title>
+      <Title x="7.09">25-Oct</Title>
+      <Title x="18.4">25-Nov</Title>
+      <Title x="5.56">25-Dec</Title>
+      <Title x="0.00149">26-Jan</Title>
+      <Title x="0.789">26-Feb</Title>
+      <Title x="0.26">26-Mar</Title>
+      <Title x="0.626">26-Apr</Title>
+      <Title x="0.865">26-May</Title>
+      <Title x="0.908">26-Jun</Title>
+      <Title x="1.42">26-Jul</Title>
+      <Title x="2.07">26-Aug</Title>
+      <Title x="3.37">26-Sep</Title>
+      <Title x="7.09">26-Oct</Title>
+      <Title x="18.5">26-Nov</Title>
+      <Title x="5.55">26-Dec</Title>
+    </Inflow>
+    <Downstream Name="HBR-Demands [2017-2026]" Description="Mod�le de demandes mensuelles pr�vues (Janvier-2017 au D�cembre 2026) " Title="Month" X_Title="Demand(Mm3)" Count="120">
+      <Title x="2.22" />
+      <Title x="2.37" />
+      <Title x="3.62" />
+      <Title x="4.62" />
+      <Title x="3.03" />
+      <Title x="3.85" />
+      <Title x="4.34" />
+      <Title x="4.47" />
+      <Title x="2.93" />
+      <Title x="4.06" />
+      <Title x="2.07" />
+      <Title x="2.01" />
+      <Title x="2.43" />
+      <Title x="2.6" />
+      <Title x="4.03" />
+      <Title x="5.18" />
+      <Title x="3.34" />
+      <Title x="4.28" />
+      <Title x="4.85" />
+      <Title x="5" />
+      <Title x="3.23" />
+      <Title x="4.54" />
+      <Title x="2.27" />
+      <Title x="2.19" />
+      <Title x="2.83" />
+      <Title x="3.04" />
+      <Title x="4.83" />
+      <Title x="6.26" />
+      <Title x="3.95" />
+      <Title x="5.12" />
+      <Title x="5.83" />
+      <Title x="6.01" />
+      <Title x="3.81" />
+      <Title x="5.46" />
+      <Title x="2.62" />
+      <Title x="2.53" />
+      <Title x="3.23" />
+      <Title x="3.48" />
+      <Title x="5.62" />
+      <Title x="7.34" />
+      <Title x="4.56" />
+      <Title x="5.96" />
+      <Title x="6.81" />
+      <Title x="7.03" />
+      <Title x="4.39" />
+      <Title x="6.39" />
+      <Title x="2.98" />
+      <Title x="2.87" />
+      <Title x="3.63" />
+      <Title x="3.92" />
+      <Title x="6.42" />
+      <Title x="8.43" />
+      <Title x="5.16" />
+      <Title x="6.8" />
+      <Title x="7.79" />
+      <Title x="8.05" />
+      <Title x="4.97" />
+      <Title x="7.32" />
+      <Title x="3.34" />
+      <Title x="3.21" />
+      <Title x="3.66" />
+      <Title x="3.95" />
+      <Title x="6.45" />
+      <Title x="8.46" />
+      <Title x="5.2" />
+      <Title x="6.84" />
+      <Title x="7.82" />
+      <Title x="8.09" />
+      <Title x="5" />
+      <Title x="7.35" />
+      <Title x="3.37" />
+      <Title x="3.24" />
+      <Title x="3.69" />
+      <Title x="3.98" />
+      <Title x="6.48" />
+      <Title x="8.49" />
+      <Title x="5.23" />
+      <Title x="6.87" />
+      <Title x="7.86" />
+      <Title x="8.12" />
+      <Title x="5.03" />
+      <Title x="7.38" />
+      <Title x="3.4" />
+      <Title x="3.27" />
+      <Title x="3.72" />
+      <Title x="4.01" />
+      <Title x="6.52" />
+      <Title x="8.52" />
+      <Title x="5.27" />
+      <Title x="6.91" />
+      <Title x="7.89" />
+      <Title x="8.15" />
+      <Title x="5.07" />
+      <Title x="7.41" />
+      <Title x="3.43" />
+      <Title x="3.3" />
+      <Title x="3.75" />
+      <Title x="4.04" />
+      <Title x="6.55" />
+      <Title x="8.56" />
+      <Title x="5.3" />
+      <Title x="6.94" />
+      <Title x="7.93" />
+      <Title x="8.19" />
+      <Title x="5.1" />
+      <Title x="7.44" />
+      <Title x="3.46" />
+      <Title x="3.34" />
+      <Title x="3.97" />
+      <Title x="4.08" />
+      <Title x="6.58" />
+      <Title x="8.59" />
+      <Title x="5.34" />
+      <Title x="6.98" />
+      <Title x="7.97" />
+      <Title x="8.23" />
+      <Title x="5.14" />
+      <Title x="7.48" />
+      <Title x="3.5" />
+      <Title x="3.37" />
+    </Downstream>
+  </Reservoir>
+</RMOSProject>
