@@ -49,7 +49,32 @@ public class AnnTimeSeriesFomator
         DataSerie1D mTestingOutputs;
         public DataSerie1D Testing_Outputs
         { get { return mTestingOutputs; } }
-               
+         
+        /// <summary>
+        /// Formate Training and Testing (inputs-outputs) by specific time series indexes. 
+        /// </summary>
+        /// <param name="timeSeriesIndexes"></param>
+        public void Formate(DataSerie1D timeSeriesIndexes)
+        { 
+        try
+            {
+                if (object.Equals(Data, null)) { return; }
+                if (object.Equals(Data.Data, null)) { return; }
+                int dataCount = Data.Count;
+                if (dataCount < 1) { return; }
+
+                TrainingCount = (int)((TrainingRate * dataCount) / 100);
+                TestingCount = (dataCount - TrainingCount);
+
+                mTrainingInputs = new DataSerieTD() { Name = "Training inputs" };
+                mTrainingOutputs = new DataSerie1D() { Name = "Training outputs" };
+
+
+
+
+            }
+            catch (Exception ex) { throw ex; }
+        } 
         public void Formate()
         {
             if (object.Equals(Data, null)) { return ; }
@@ -61,7 +86,7 @@ public class AnnTimeSeriesFomator
             TestingCount = (dataCount - TrainingCount);
 
             mTrainingInputs = new DataSerieTD() { Name ="Training inputs" };
-            mTrainingOutputs = new DataSerie1D() { Name = "Training outputs" }; ;
+            mTrainingOutputs = new DataSerie1D() { Name = "Training outputs" };
             
 
             for (int i = 0; i < (TrainingCount - mAnnInputLayerCount ); i++)

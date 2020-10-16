@@ -309,7 +309,8 @@ Public Class AnnEoForm
 
         With AnnDataFormator
             .Data = DataSerie
-            .Formate(True, 9)
+            .Formate() 'Simple format.
+            '.Formate(True, 9) 'Formating including time in month
 
         End With
         DrawDataGraphic(AnnDataFormator.Training_Outputs, Chart1)
