@@ -82,7 +82,8 @@ public class AnnTimeSeriesFomator
                 {
                     indexes[i] = (int)timeSeriesIndexes.Data[i].X_Value;
                 }
-               
+
+                
 
 
             }
