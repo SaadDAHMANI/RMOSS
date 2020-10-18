@@ -1,8 +1,13 @@
 ﻿Option Strict On
+Imports IOOperations
 Imports IOOperations.Components
-
+Imports ForecastingEngine.NeuralNetworks
 Public Class ANNsTimeSeriesForm
     Dim DataSerie As DataSerie1D
+
+    Private AnnDataFormator As New ForecastingEngine.AnnTimeSeriesFomator()
+    Private NeuralNetEO As NeuralNetworksEngineEO
+    Private NeuralNetStructure As DataSerie1D
 
     Private Sub BtnImportInputs_Click(sender As Object, e As EventArgs) Handles BtnImportInputs.Click
         Try
@@ -23,8 +28,6 @@ Public Class ANNsTimeSeriesForm
             Throw ex
         End Try
     End Sub
-
-
 
     Private Sub DrawDataGraphic(ByRef ds As DataSerie1D, ByRef chart As DataVisualization.Charting.Chart)
         If IsNothing(ds) Then Return
@@ -59,4 +62,51 @@ Public Class ANNsTimeSeriesForm
 
     End Sub
 
+    Private Sub ANNsTimeSeriesForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+        CmbInputsFileType.Items.Clear()
+        For i = 0 To 1
+            CmbInputsFileType.Items.Add(CType(i, FileFormatEnum).ToString())
+        Next
+
+        If IsNothing(AnnDataFormator) = False Then
+            PrtyGrdAnnData.SelectedObject = AnnDataFormator
+        End If
+
+        '-------------------------------------------------------------------------------------
+        If IsNothing(NeuralNetStructure) Then
+            NeuralNetStructure = New DataSerie1D() With {.Name = "Neural Net Structure", .Title = "Layer Name", .X_Title = "Neurone count"}
+            With NeuralNetStructure
+                .Add("L1", 3)
+                .Add("L2", 2)
+            End With
+        End If
+        PrtyGrdAnnStructure.SelectedObject = NeuralNetStructure
+        '------------------------------------------------------------------------------------
+        If IsNothing(NeuralNetEO) Then
+            NeuralNetEO = New NeuralNetworksEngineEO()
+        End If
+        NeuralNetEO.LayersStruct = NeuralNetworksEngine.GetLayersStruct(NeuralNetStructure, NeuralNetEO.InputsCount, NeuralNetEO.OuputsCount)
+        NeuralNetEO.MaxIterationCount = 100
+        NeuralNetEO.ActivationFunction = ActivationFunctionEnum.SigmoidFunction
+        NeuralNetEO.LearningAlgorithm = LearningAlgorithmEnum.LevenbergMarquardtLearning
+        PrtyGrdNeuralNet.SelectedObject = NeuralNetEO
+
+        '---------------------------------------------------
+        'PrtGrdAnnOptimizer.SelectedObject = AnnOptimizer
+        '---------------------------------------------------
+        'If Not Equals(SequentialForecaster, Nothing) Then
+        'PrtyGrdForecasting.SelectedObject = SequentialForecaster
+        'End If
+
+    End Sub
+
+    Private Sub BtnFormateDataSerie_Click(sender As Object, e As EventArgs) Handles BtnFormateDataSerie.Click
+        With AnnDataFormator
+            .Data = DataSerie
+            .Formate()
+        End With
+
+        DrawDataGraphic(AnnDataFormator.Training_Outputs, Chart1)
+        DrawDataGraphic(AnnDataFormator.Testing_Outputs, Chart2)
+    End Sub
 End Class

@@ -308,21 +308,9 @@ Public Class AnnEoForm
 #End Region
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnFormateDataSerie.Click
-
-        Dim tsIndexes As New DataSerie1D()
-        With tsIndexes
-            .Add("12", 12)
-            .Add("2", 2)
-            .Add("6", 6)
-            .Add("3", 3)
-            .Add("1", 1)
-
-
-        End With
-
         With AnnDataFormator
             .Data = DataSerie
-            .Formate(tsIndexes)
+            .Format = ForecastingEngine.AnnTimeSeriesFomatEnum.SequentielInputs
             .Formate() 'Simple format.
             '.Formate(True, 9) 'Formating including time in month
 

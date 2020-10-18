@@ -22,19 +22,23 @@ Partial Class ANNsTimeSeriesForm
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ChartArea8 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend8 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series8 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea9 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend9 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series9 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea10 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend10 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series10 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MainTabControl = New System.Windows.Forms.TabControl()
         Me.DataTabPage = New System.Windows.Forms.TabPage()
-        Me.TabPageDataStructure = New System.Windows.Forms.TabPage()
-        Me.TrainingTestingTabPage = New System.Windows.Forms.TabPage()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
@@ -42,6 +46,7 @@ Partial Class ANNsTimeSeriesForm
         Me.BtnImportInputs = New System.Windows.Forms.Button()
         Me.PrptGrdInput = New System.Windows.Forms.PropertyGrid()
         Me.DataChart = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.TabPageDataStructure = New System.Windows.Forms.TabPage()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.PrtyGrdAnnData = New System.Windows.Forms.PropertyGrid()
@@ -49,13 +54,23 @@ Partial Class ANNsTimeSeriesForm
         Me.SplitContainer3 = New System.Windows.Forms.SplitContainer()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.TrainingTestingTabPage = New System.Windows.Forms.TabPage()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.SplitContainer4 = New System.Windows.Forms.SplitContainer()
-        Me.SplitContainer5 = New System.Windows.Forms.SplitContainer()
-        Me.SplitContainer6 = New System.Windows.Forms.SplitContainer()
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.PrtyGrdAnnStructure = New System.Windows.Forms.PropertyGrid()
+        Me.BtnLuanchTraining = New System.Windows.Forms.Button()
+        Me.PrtyGrdNeuralNet = New System.Windows.Forms.PropertyGrid()
+        Me.BtnComputeTrainingOuts = New System.Windows.Forms.Button()
+        Me.SplitContainer9 = New System.Windows.Forms.SplitContainer()
+        Me.ChartTrainingResults = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.PrtyGrdTrainingIndexes = New System.Windows.Forms.PropertyGrid()
+        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
+        Me.PrtyGrdTestinngIndexes = New System.Windows.Forms.PropertyGrid()
+        Me.ChartTestingResults = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.MainTabControl.SuspendLayout()
         Me.DataTabPage.SuspendLayout()
-        Me.TabPageDataStructure.SuspendLayout()
-        Me.TrainingTestingTabPage.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -63,6 +78,7 @@ Partial Class ANNsTimeSeriesForm
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.DataChart, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPageDataStructure.SuspendLayout()
         CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer2.Panel1.SuspendLayout()
         Me.SplitContainer2.Panel2.SuspendLayout()
@@ -74,14 +90,20 @@ Partial Class ANNsTimeSeriesForm
         Me.SplitContainer3.SuspendLayout()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TrainingTestingTabPage.SuspendLayout()
         CType(Me.SplitContainer4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer4.Panel1.SuspendLayout()
         Me.SplitContainer4.Panel2.SuspendLayout()
         Me.SplitContainer4.SuspendLayout()
-        CType(Me.SplitContainer5, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SplitContainer5.SuspendLayout()
-        CType(Me.SplitContainer6, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SplitContainer6.SuspendLayout()
+        Me.TableLayoutPanel3.SuspendLayout()
+        CType(Me.SplitContainer9, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer9.Panel1.SuspendLayout()
+        Me.SplitContainer9.Panel2.SuspendLayout()
+        Me.SplitContainer9.SuspendLayout()
+        CType(Me.ChartTrainingResults, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel4.SuspendLayout()
+        Me.TableLayoutPanel5.SuspendLayout()
+        CType(Me.ChartTestingResults, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MainTabControl
@@ -89,11 +111,12 @@ Partial Class ANNsTimeSeriesForm
         Me.MainTabControl.Controls.Add(Me.DataTabPage)
         Me.MainTabControl.Controls.Add(Me.TabPageDataStructure)
         Me.MainTabControl.Controls.Add(Me.TrainingTestingTabPage)
+        Me.MainTabControl.Controls.Add(Me.TabPage1)
         Me.MainTabControl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MainTabControl.Location = New System.Drawing.Point(0, 0)
         Me.MainTabControl.Name = "MainTabControl"
         Me.MainTabControl.SelectedIndex = 0
-        Me.MainTabControl.Size = New System.Drawing.Size(800, 450)
+        Me.MainTabControl.Size = New System.Drawing.Size(998, 499)
         Me.MainTabControl.TabIndex = 0
         '
         'DataTabPage
@@ -106,28 +129,6 @@ Partial Class ANNsTimeSeriesForm
         Me.DataTabPage.TabIndex = 0
         Me.DataTabPage.Text = "Data"
         Me.DataTabPage.UseVisualStyleBackColor = True
-        '
-        'TabPageDataStructure
-        '
-        Me.TabPageDataStructure.Controls.Add(Me.SplitContainer2)
-        Me.TabPageDataStructure.Location = New System.Drawing.Point(4, 22)
-        Me.TabPageDataStructure.Name = "TabPageDataStructure"
-        Me.TabPageDataStructure.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPageDataStructure.Size = New System.Drawing.Size(792, 424)
-        Me.TabPageDataStructure.TabIndex = 1
-        Me.TabPageDataStructure.Text = "ANN-Data Structure"
-        Me.TabPageDataStructure.UseVisualStyleBackColor = True
-        '
-        'TrainingTestingTabPage
-        '
-        Me.TrainingTestingTabPage.Controls.Add(Me.SplitContainer4)
-        Me.TrainingTestingTabPage.Location = New System.Drawing.Point(4, 22)
-        Me.TrainingTestingTabPage.Name = "TrainingTestingTabPage"
-        Me.TrainingTestingTabPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.TrainingTestingTabPage.Size = New System.Drawing.Size(792, 424)
-        Me.TrainingTestingTabPage.TabIndex = 2
-        Me.TrainingTestingTabPage.Text = "Training-Testing"
-        Me.TrainingTestingTabPage.UseVisualStyleBackColor = True
         '
         'SplitContainer1
         '
@@ -217,22 +218,33 @@ Partial Class ANNsTimeSeriesForm
         '
         'DataChart
         '
-        ChartArea8.Name = "ChartArea1"
-        Me.DataChart.ChartAreas.Add(ChartArea8)
+        ChartArea1.Name = "ChartArea1"
+        Me.DataChart.ChartAreas.Add(ChartArea1)
         Me.DataChart.Dock = System.Windows.Forms.DockStyle.Fill
-        Legend8.Alignment = System.Drawing.StringAlignment.Center
-        Legend8.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
-        Legend8.Name = "Legend1"
-        Me.DataChart.Legends.Add(Legend8)
+        Legend1.Alignment = System.Drawing.StringAlignment.Center
+        Legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
+        Legend1.Name = "Legend1"
+        Me.DataChart.Legends.Add(Legend1)
         Me.DataChart.Location = New System.Drawing.Point(0, 0)
         Me.DataChart.Name = "DataChart"
-        Series8.ChartArea = "ChartArea1"
-        Series8.Legend = "Legend1"
-        Series8.Name = "Series1"
-        Me.DataChart.Series.Add(Series8)
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        Me.DataChart.Series.Add(Series1)
         Me.DataChart.Size = New System.Drawing.Size(520, 418)
         Me.DataChart.TabIndex = 1
         Me.DataChart.Text = "Chart1"
+        '
+        'TabPageDataStructure
+        '
+        Me.TabPageDataStructure.Controls.Add(Me.SplitContainer2)
+        Me.TabPageDataStructure.Location = New System.Drawing.Point(4, 22)
+        Me.TabPageDataStructure.Name = "TabPageDataStructure"
+        Me.TabPageDataStructure.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPageDataStructure.Size = New System.Drawing.Size(990, 473)
+        Me.TabPageDataStructure.TabIndex = 1
+        Me.TabPageDataStructure.Text = "ANN-Data Structure"
+        Me.TabPageDataStructure.UseVisualStyleBackColor = True
         '
         'SplitContainer2
         '
@@ -247,8 +259,8 @@ Partial Class ANNsTimeSeriesForm
         'SplitContainer2.Panel2
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.SplitContainer3)
-        Me.SplitContainer2.Size = New System.Drawing.Size(786, 418)
-        Me.SplitContainer2.SplitterDistance = 262
+        Me.SplitContainer2.Size = New System.Drawing.Size(984, 467)
+        Me.SplitContainer2.SplitterDistance = 328
         Me.SplitContainer2.TabIndex = 1
         '
         'TableLayoutPanel2
@@ -261,26 +273,26 @@ Partial Class ANNsTimeSeriesForm
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 3
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(262, 418)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(328, 467)
         Me.TableLayoutPanel2.TabIndex = 0
         '
         'PrtyGrdAnnData
         '
         Me.PrtyGrdAnnData.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PrtyGrdAnnData.Location = New System.Drawing.Point(3, 61)
+        Me.PrtyGrdAnnData.Location = New System.Drawing.Point(3, 73)
         Me.PrtyGrdAnnData.Name = "PrtyGrdAnnData"
-        Me.PrtyGrdAnnData.Size = New System.Drawing.Size(256, 354)
+        Me.PrtyGrdAnnData.Size = New System.Drawing.Size(322, 391)
         Me.PrtyGrdAnnData.TabIndex = 7
         '
         'BtnFormateDataSerie
         '
         Me.BtnFormateDataSerie.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnFormateDataSerie.Location = New System.Drawing.Point(3, 15)
+        Me.BtnFormateDataSerie.Location = New System.Drawing.Point(3, 25)
         Me.BtnFormateDataSerie.Name = "BtnFormateDataSerie"
-        Me.BtnFormateDataSerie.Size = New System.Drawing.Size(256, 40)
+        Me.BtnFormateDataSerie.Size = New System.Drawing.Size(322, 40)
         Me.BtnFormateDataSerie.TabIndex = 6
         Me.BtnFormateDataSerie.Text = "Formate Data Serie"
         Me.BtnFormateDataSerie.UseVisualStyleBackColor = True
@@ -299,47 +311,68 @@ Partial Class ANNsTimeSeriesForm
         'SplitContainer3.Panel2
         '
         Me.SplitContainer3.Panel2.Controls.Add(Me.Chart2)
-        Me.SplitContainer3.Size = New System.Drawing.Size(520, 418)
-        Me.SplitContainer3.SplitterDistance = 209
+        Me.SplitContainer3.Size = New System.Drawing.Size(652, 467)
+        Me.SplitContainer3.SplitterDistance = 233
         Me.SplitContainer3.TabIndex = 8
         '
         'Chart1
         '
-        ChartArea9.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea9)
+        ChartArea2.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea2)
         Me.Chart1.Dock = System.Windows.Forms.DockStyle.Fill
-        Legend9.Alignment = System.Drawing.StringAlignment.Center
-        Legend9.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
-        Legend9.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend9)
+        Legend2.Alignment = System.Drawing.StringAlignment.Center
+        Legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
+        Legend2.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend2)
         Me.Chart1.Location = New System.Drawing.Point(0, 0)
         Me.Chart1.Name = "Chart1"
-        Series9.ChartArea = "ChartArea1"
-        Series9.Legend = "Legend1"
-        Series9.Name = "Series1"
-        Me.Chart1.Series.Add(Series9)
-        Me.Chart1.Size = New System.Drawing.Size(520, 209)
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        Me.Chart1.Series.Add(Series2)
+        Me.Chart1.Size = New System.Drawing.Size(652, 233)
         Me.Chart1.TabIndex = 0
         Me.Chart1.Text = "Chart1"
         '
         'Chart2
         '
-        ChartArea10.Name = "ChartArea1"
-        Me.Chart2.ChartAreas.Add(ChartArea10)
+        ChartArea3.Name = "ChartArea1"
+        Me.Chart2.ChartAreas.Add(ChartArea3)
         Me.Chart2.Dock = System.Windows.Forms.DockStyle.Fill
-        Legend10.Alignment = System.Drawing.StringAlignment.Center
-        Legend10.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
-        Legend10.Name = "Legend1"
-        Me.Chart2.Legends.Add(Legend10)
+        Legend3.Alignment = System.Drawing.StringAlignment.Center
+        Legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
+        Legend3.Name = "Legend1"
+        Me.Chart2.Legends.Add(Legend3)
         Me.Chart2.Location = New System.Drawing.Point(0, 0)
         Me.Chart2.Name = "Chart2"
-        Series10.ChartArea = "ChartArea1"
-        Series10.Legend = "Legend1"
-        Series10.Name = "Series1"
-        Me.Chart2.Series.Add(Series10)
-        Me.Chart2.Size = New System.Drawing.Size(520, 205)
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Series1"
+        Me.Chart2.Series.Add(Series3)
+        Me.Chart2.Size = New System.Drawing.Size(652, 230)
         Me.Chart2.TabIndex = 1
         Me.Chart2.Text = "Chart2"
+        '
+        'TrainingTestingTabPage
+        '
+        Me.TrainingTestingTabPage.Controls.Add(Me.SplitContainer4)
+        Me.TrainingTestingTabPage.Location = New System.Drawing.Point(4, 22)
+        Me.TrainingTestingTabPage.Name = "TrainingTestingTabPage"
+        Me.TrainingTestingTabPage.Padding = New System.Windows.Forms.Padding(3)
+        Me.TrainingTestingTabPage.Size = New System.Drawing.Size(990, 473)
+        Me.TrainingTestingTabPage.TabIndex = 2
+        Me.TrainingTestingTabPage.Text = "Training-Testing"
+        Me.TrainingTestingTabPage.UseVisualStyleBackColor = True
+        '
+        'TabPage1
+        '
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(792, 424)
+        Me.TabPage1.TabIndex = 3
+        Me.TabPage1.Text = "TabPage1"
+        Me.TabPage1.UseVisualStyleBackColor = True
         '
         'SplitContainer4
         '
@@ -349,47 +382,185 @@ Partial Class ANNsTimeSeriesForm
         '
         'SplitContainer4.Panel1
         '
-        Me.SplitContainer4.Panel1.Controls.Add(Me.SplitContainer6)
+        Me.SplitContainer4.Panel1.Controls.Add(Me.TableLayoutPanel3)
         '
         'SplitContainer4.Panel2
         '
-        Me.SplitContainer4.Panel2.Controls.Add(Me.SplitContainer5)
-        Me.SplitContainer4.Size = New System.Drawing.Size(786, 418)
-        Me.SplitContainer4.SplitterDistance = 274
-        Me.SplitContainer4.TabIndex = 0
+        Me.SplitContainer4.Panel2.Controls.Add(Me.SplitContainer9)
+        Me.SplitContainer4.Size = New System.Drawing.Size(984, 467)
+        Me.SplitContainer4.SplitterDistance = 328
+        Me.SplitContainer4.TabIndex = 1
         '
-        'SplitContainer5
+        'TableLayoutPanel3
         '
-        Me.SplitContainer5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer5.Location = New System.Drawing.Point(0, 0)
-        Me.SplitContainer5.Name = "SplitContainer5"
-        Me.SplitContainer5.Orientation = System.Windows.Forms.Orientation.Horizontal
-        Me.SplitContainer5.Size = New System.Drawing.Size(508, 418)
-        Me.SplitContainer5.SplitterDistance = 169
-        Me.SplitContainer5.TabIndex = 0
+        Me.TableLayoutPanel3.ColumnCount = 1
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel3.Controls.Add(Me.PrtyGrdAnnStructure, 0, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.BtnLuanchTraining, 0, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.PrtyGrdNeuralNet, 0, 4)
+        Me.TableLayoutPanel3.Controls.Add(Me.BtnComputeTrainingOuts, 0, 3)
+        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
+        Me.TableLayoutPanel3.RowCount = 5
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(328, 467)
+        Me.TableLayoutPanel3.TabIndex = 0
         '
-        'SplitContainer6
+        'PrtyGrdAnnStructure
         '
-        Me.SplitContainer6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer6.Location = New System.Drawing.Point(0, 0)
-        Me.SplitContainer6.Name = "SplitContainer6"
-        Me.SplitContainer6.Orientation = System.Windows.Forms.Orientation.Horizontal
-        Me.SplitContainer6.Size = New System.Drawing.Size(274, 418)
-        Me.SplitContainer6.SplitterDistance = 185
-        Me.SplitContainer6.TabIndex = 0
+        Me.PrtyGrdAnnStructure.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PrtyGrdAnnStructure.HelpVisible = False
+        Me.PrtyGrdAnnStructure.Location = New System.Drawing.Point(3, 13)
+        Me.PrtyGrdAnnStructure.Name = "PrtyGrdAnnStructure"
+        Me.PrtyGrdAnnStructure.Size = New System.Drawing.Size(322, 125)
+        Me.PrtyGrdAnnStructure.TabIndex = 3
+        '
+        'BtnLuanchTraining
+        '
+        Me.BtnLuanchTraining.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnLuanchTraining.Location = New System.Drawing.Point(3, 145)
+        Me.BtnLuanchTraining.Name = "BtnLuanchTraining"
+        Me.BtnLuanchTraining.Size = New System.Drawing.Size(322, 32)
+        Me.BtnLuanchTraining.TabIndex = 0
+        Me.BtnLuanchTraining.Text = "Luanch New Training Operation"
+        Me.BtnLuanchTraining.UseVisualStyleBackColor = True
+        '
+        'PrtyGrdNeuralNet
+        '
+        Me.PrtyGrdNeuralNet.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PrtyGrdNeuralNet.HelpVisible = False
+        Me.PrtyGrdNeuralNet.Location = New System.Drawing.Point(3, 224)
+        Me.PrtyGrdNeuralNet.Name = "PrtyGrdNeuralNet"
+        Me.PrtyGrdNeuralNet.Size = New System.Drawing.Size(322, 240)
+        Me.PrtyGrdNeuralNet.TabIndex = 1
+        '
+        'BtnComputeTrainingOuts
+        '
+        Me.BtnComputeTrainingOuts.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnComputeTrainingOuts.Location = New System.Drawing.Point(3, 184)
+        Me.BtnComputeTrainingOuts.Name = "BtnComputeTrainingOuts"
+        Me.BtnComputeTrainingOuts.Size = New System.Drawing.Size(322, 34)
+        Me.BtnComputeTrainingOuts.TabIndex = 4
+        Me.BtnComputeTrainingOuts.Text = "Compute Training && Testing Outputs"
+        Me.BtnComputeTrainingOuts.UseVisualStyleBackColor = True
+        '
+        'SplitContainer9
+        '
+        Me.SplitContainer9.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer9.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer9.Name = "SplitContainer9"
+        Me.SplitContainer9.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'SplitContainer9.Panel1
+        '
+        Me.SplitContainer9.Panel1.Controls.Add(Me.TableLayoutPanel4)
+        '
+        'SplitContainer9.Panel2
+        '
+        Me.SplitContainer9.Panel2.Controls.Add(Me.TableLayoutPanel5)
+        Me.SplitContainer9.Size = New System.Drawing.Size(652, 467)
+        Me.SplitContainer9.SplitterDistance = 236
+        Me.SplitContainer9.TabIndex = 1
+        '
+        'ChartTrainingResults
+        '
+        ChartArea4.Name = "ChartArea1"
+        Me.ChartTrainingResults.ChartAreas.Add(ChartArea4)
+        Me.ChartTrainingResults.Dock = System.Windows.Forms.DockStyle.Fill
+        Legend4.Alignment = System.Drawing.StringAlignment.Center
+        Legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
+        Legend4.Name = "Legend1"
+        Me.ChartTrainingResults.Legends.Add(Legend4)
+        Me.ChartTrainingResults.Location = New System.Drawing.Point(3, 3)
+        Me.ChartTrainingResults.Name = "ChartTrainingResults"
+        Series4.ChartArea = "ChartArea1"
+        Series4.Legend = "Legend1"
+        Series4.Name = "Series1"
+        Me.ChartTrainingResults.Series.Add(Series4)
+        Me.ChartTrainingResults.Size = New System.Drawing.Size(427, 230)
+        Me.ChartTrainingResults.TabIndex = 0
+        Me.ChartTrainingResults.Text = "Chart3"
+        '
+        'PrtyGrdTrainingIndexes
+        '
+        Me.PrtyGrdTrainingIndexes.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PrtyGrdTrainingIndexes.Location = New System.Drawing.Point(436, 3)
+        Me.PrtyGrdTrainingIndexes.Name = "PrtyGrdTrainingIndexes"
+        Me.PrtyGrdTrainingIndexes.Size = New System.Drawing.Size(213, 230)
+        Me.PrtyGrdTrainingIndexes.TabIndex = 1
+        '
+        'TableLayoutPanel4
+        '
+        Me.TableLayoutPanel4.ColumnCount = 2
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.0!))
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.TableLayoutPanel4.Controls.Add(Me.PrtyGrdTrainingIndexes, 1, 0)
+        Me.TableLayoutPanel4.Controls.Add(Me.ChartTrainingResults, 0, 0)
+        Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
+        Me.TableLayoutPanel4.RowCount = 1
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(652, 236)
+        Me.TableLayoutPanel4.TabIndex = 1
+        '
+        'TableLayoutPanel5
+        '
+        Me.TableLayoutPanel5.ColumnCount = 2
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.0!))
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.TableLayoutPanel5.Controls.Add(Me.ChartTestingResults, 0, 0)
+        Me.TableLayoutPanel5.Controls.Add(Me.PrtyGrdTestinngIndexes, 1, 0)
+        Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel5.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
+        Me.TableLayoutPanel5.RowCount = 1
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(652, 227)
+        Me.TableLayoutPanel5.TabIndex = 0
+        '
+        'PrtyGrdTestinngIndexes
+        '
+        Me.PrtyGrdTestinngIndexes.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PrtyGrdTestinngIndexes.Location = New System.Drawing.Point(459, 3)
+        Me.PrtyGrdTestinngIndexes.Name = "PrtyGrdTestinngIndexes"
+        Me.PrtyGrdTestinngIndexes.Size = New System.Drawing.Size(190, 221)
+        Me.PrtyGrdTestinngIndexes.TabIndex = 1
+        '
+        'ChartTestingResults
+        '
+        ChartArea5.Name = "ChartArea1"
+        Me.ChartTestingResults.ChartAreas.Add(ChartArea5)
+        Me.ChartTestingResults.Dock = System.Windows.Forms.DockStyle.Fill
+        Legend5.Alignment = System.Drawing.StringAlignment.Center
+        Legend5.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
+        Legend5.Name = "Legend1"
+        Me.ChartTestingResults.Legends.Add(Legend5)
+        Me.ChartTestingResults.Location = New System.Drawing.Point(3, 3)
+        Me.ChartTestingResults.Name = "ChartTestingResults"
+        Series5.ChartArea = "ChartArea1"
+        Series5.Legend = "Legend1"
+        Series5.Name = "Series1"
+        Me.ChartTestingResults.Series.Add(Series5)
+        Me.ChartTestingResults.Size = New System.Drawing.Size(450, 221)
+        Me.ChartTestingResults.TabIndex = 2
+        Me.ChartTestingResults.Text = "ChartTestingResults"
         '
         'ANNsTimeSeriesForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(998, 499)
         Me.Controls.Add(Me.MainTabControl)
         Me.Name = "ANNsTimeSeriesForm"
-        Me.Text = "ANNsTimeSeriesForm"
+        Me.Text = "ANN  for Time Series"
         Me.MainTabControl.ResumeLayout(False)
         Me.DataTabPage.ResumeLayout(False)
-        Me.TabPageDataStructure.ResumeLayout(False)
-        Me.TrainingTestingTabPage.ResumeLayout(False)
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -397,6 +568,7 @@ Partial Class ANNsTimeSeriesForm
         Me.GroupBox1.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         CType(Me.DataChart, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPageDataStructure.ResumeLayout(False)
         Me.SplitContainer2.Panel1.ResumeLayout(False)
         Me.SplitContainer2.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -408,14 +580,20 @@ Partial Class ANNsTimeSeriesForm
         Me.SplitContainer3.ResumeLayout(False)
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Chart2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TrainingTestingTabPage.ResumeLayout(False)
         Me.SplitContainer4.Panel1.ResumeLayout(False)
         Me.SplitContainer4.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer4.ResumeLayout(False)
-        CType(Me.SplitContainer5, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SplitContainer5.ResumeLayout(False)
-        CType(Me.SplitContainer6, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SplitContainer6.ResumeLayout(False)
+        Me.TableLayoutPanel3.ResumeLayout(False)
+        Me.SplitContainer9.Panel1.ResumeLayout(False)
+        Me.SplitContainer9.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer9, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer9.ResumeLayout(False)
+        CType(Me.ChartTrainingResults, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel4.ResumeLayout(False)
+        Me.TableLayoutPanel5.ResumeLayout(False)
+        CType(Me.ChartTestingResults, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -438,7 +616,18 @@ Partial Class ANNsTimeSeriesForm
     Friend WithEvents SplitContainer3 As SplitContainer
     Friend WithEvents Chart1 As DataVisualization.Charting.Chart
     Friend WithEvents Chart2 As DataVisualization.Charting.Chart
+    Friend WithEvents TabPage1 As TabPage
     Friend WithEvents SplitContainer4 As SplitContainer
-    Friend WithEvents SplitContainer6 As SplitContainer
-    Friend WithEvents SplitContainer5 As SplitContainer
+    Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
+    Friend WithEvents PrtyGrdAnnStructure As PropertyGrid
+    Friend WithEvents BtnLuanchTraining As Button
+    Friend WithEvents PrtyGrdNeuralNet As PropertyGrid
+    Friend WithEvents BtnComputeTrainingOuts As Button
+    Friend WithEvents SplitContainer9 As SplitContainer
+    Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
+    Friend WithEvents PrtyGrdTrainingIndexes As PropertyGrid
+    Friend WithEvents ChartTrainingResults As DataVisualization.Charting.Chart
+    Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
+    Friend WithEvents PrtyGrdTestinngIndexes As PropertyGrid
+    Friend WithEvents ChartTestingResults As DataVisualization.Charting.Chart
 End Class

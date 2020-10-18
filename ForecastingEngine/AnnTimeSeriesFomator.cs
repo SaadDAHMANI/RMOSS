@@ -9,6 +9,14 @@ namespace ForecastingEngine
 {
 public class AnnTimeSeriesFomator
     {
+
+        public AnnTimeSeriesFomator()
+        {
+            //SpecificInputModel = new DataSerie1D();
+            SpecificInputModel.Add("In-1", 1);
+            SpecificInputModel.Add("In-2", 2);
+            SpecificInputModel.Add("In-3", 6);
+        }
         public DataSerie1D Data;
         double TrainingRate = 70;
         public double  Training_Rate
@@ -34,6 +42,8 @@ public class AnnTimeSeriesFomator
             }
         }
 
+        public AnnTimeSeriesFomatEnum Format { get; set; } = AnnTimeSeriesFomatEnum.SequentielInputs;
+
         DataSerieTD mTrainingInputs;
         public DataSerieTD Training_Inputs
         { get { return mTrainingInputs;} }
@@ -50,11 +60,32 @@ public class AnnTimeSeriesFomator
         public DataSerie1D Testing_Outputs
         { get { return mTestingOutputs; } }
 
+        public DataSerie1D SpecificInputModel { get; set; } = new DataSerie1D();
+        public void Formate()
+         { 
+                    switch(Format)
+            {
+                case AnnTimeSeriesFomatEnum.SequentielInputs:
+                    FormateDefault();
+                    break;
+                case AnnTimeSeriesFomatEnum.SequentielInputsWithTimeindex:
+                    Formate(true, 9);
+                    break;
+                case AnnTimeSeriesFomatEnum.SpecificInputModel:
+                    Formate(SpecificInputModel);
+                    break;
+                default:
+                    FormateDefault();
+                    break;
+            }
+
+        }
+
         /// <summary>
         /// Formate Training and Testing (inputs-outputs) by specific time series indexes. 
         /// </summary>
         /// <param name="annInputModel"> The ANN input model </param>
-        public void Formate(DataSerie1D annInputModel)
+        private void Formate(DataSerie1D annInputModel)
         { 
         try
             {
@@ -65,7 +96,8 @@ public class AnnTimeSeriesFomator
 
                 if (object.Equals(annInputModel, null)) { throw new Exception("No time series indexes pattern are found."); }
                 if (object.Equals(annInputModel.Data, null)) { throw new Exception("No time series indexes pattern are found."); }
-
+                if (annInputModel.Count<1) { throw new Exception("No input model is specified."); }
+               
                 if (annInputModel.Max > dataCount) { throw new Exception("Index great then data serie count."); }
 
                 TrainingCount = (int)((TrainingRate * dataCount) / 100);
@@ -117,7 +149,7 @@ public class AnnTimeSeriesFomator
             }
             catch (Exception ex) { throw ex; }
         } 
-        public void Formate()
+        public void FormateDefault()
         {
             if (object.Equals(Data, null)) { return ; }
             if (object.Equals(Data.Data, null)) { return ; }
@@ -160,6 +192,7 @@ public class AnnTimeSeriesFomator
          
             }
 
+        
         public void Formate(bool includeMonths, int startingMonth)
         {
 
@@ -318,4 +351,12 @@ public class AnnTimeSeriesFomator
         }
     
     }
+
+    public enum AnnTimeSeriesFomatEnum
+    {
+        SequentielInputs=0,
+        SequentielInputsWithTimeindex = 1,
+        SpecificInputModel=2
+    }
+
 }
