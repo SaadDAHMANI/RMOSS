@@ -13,6 +13,8 @@ Module MainModule
     Friend GWO_Engine As RmosEngine.GreyWolfOptimizer.GWOEngine
     Friend HPSOGWO_Engine As RmosEngine.GreyWolfOptimizer.HybridPSOGWOEngine
 
+    Friend DefaultDirectory As String = "G:\Streamflow_Data" 'My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\RMOS2 Projects"
+
     Friend Enum FileFormatEnum
         CSV
         DS1
@@ -29,7 +31,7 @@ Module MainModule
     Friend Function Import_Data(ByRef dataserie As DataSerie1D) As Boolean
         Dim result As Boolean = False
         Try
-            Dim fileName As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\RMOS2 Projects"
+            Dim fileName As String = DefaultDirectory
             If My.Computer.FileSystem.DirectoryExists(fileName) = False Then
                 fileName = My.Computer.FileSystem.SpecialDirectories.MyDocuments
             End If
@@ -99,7 +101,7 @@ Module MainModule
     Friend Function Import_Data(ByRef dataserie As DataSerie2D) As Boolean
         Dim result As Boolean = False
         Try
-            Dim fileName As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\RMOS2 Projects"
+            Dim fileName As String = DefaultDirectory
             If My.Computer.FileSystem.DirectoryExists(fileName) = False Then
                 fileName = My.Computer.FileSystem.SpecialDirectories.MyDocuments
             End If
@@ -169,7 +171,7 @@ Module MainModule
         If IsNothing(dataserie) Then Return result
 
         Try
-            Dim fileName As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\RMOS2 Projects"
+            Dim fileName As String = DefaultDirectory
             If My.Computer.FileSystem.DirectoryExists(fileName) = False Then
                 fileName = My.Computer.FileSystem.SpecialDirectories.MyDocuments
             End If
@@ -206,7 +208,7 @@ Module MainModule
         If IsNothing(dataserie) Then Return result
 
         Try
-            Dim fileName As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\RMOS2 Projects"
+            Dim fileName As String = DefaultDirectory
             If My.Computer.FileSystem.DirectoryExists(fileName) = False Then
                 fileName = My.Computer.FileSystem.SpecialDirectories.MyDocuments
             End If
@@ -242,7 +244,7 @@ Module MainModule
         Dim result As Boolean = False
         If IsNothing(ds1) AndAlso IsNothing(ds2) Then Return result
         Try
-            Dim fileName As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\RMOS2 Projects"
+            Dim fileName As String = DefaultDirectory
             If My.Computer.FileSystem.DirectoryExists(fileName) = False Then
                 fileName = My.Computer.FileSystem.SpecialDirectories.MyDocuments
             End If
@@ -307,7 +309,7 @@ Module MainModule
         If IsNothing(dataserie) Then Return result
 
         Try
-            Dim fileName As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\RMOS2 Projects"
+            Dim fileName As String = DefaultDirectory
             If My.Computer.FileSystem.DirectoryExists(fileName) = False Then
                 fileName = My.Computer.FileSystem.SpecialDirectories.MyDocuments
             End If
@@ -343,7 +345,7 @@ Module MainModule
     Friend Function ImportData(ByVal fileFormat As FileFormatEnum, ByRef dataserie As DataSerieTD) As Boolean
         Dim result As Boolean = False
         Try
-            Dim fileName As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\RMOS2 Projects"
+            Dim fileName As String = DefaultDirectory
             If My.Computer.FileSystem.DirectoryExists(fileName) = False Then
                 fileName = My.Computer.FileSystem.SpecialDirectories.MyDocuments
             End If
@@ -371,7 +373,7 @@ Module MainModule
     Friend Function ImportData(ByVal fileFormat As FileFormatEnum, ByRef dataserie As DataSerie1D) As Boolean
         Dim result As Boolean = False
         Try
-            Dim fileName As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\RMOS2 Projects"
+            Dim fileName As String = DefaultDirectory
             If My.Computer.FileSystem.DirectoryExists(fileName) = False Then
                 fileName = My.Computer.FileSystem.SpecialDirectories.MyDocuments
             End If
@@ -399,7 +401,7 @@ Module MainModule
     Friend Function ImportData(ByVal fileFormat As FileFormatEnum, ByRef dataserie As DataSerie2D) As Boolean
         Dim result As Boolean = False
         Try
-            Dim fileName As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\RMOS2 Projects"
+            Dim fileName As String = DefaultDirectory
             If My.Computer.FileSystem.DirectoryExists(fileName) = False Then
                 fileName = My.Computer.FileSystem.SpecialDirectories.MyDocuments
             End If
@@ -430,7 +432,7 @@ Module MainModule
         If IsNothing(dataserie) Then Return result
 
         Try
-            Dim fileName As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\RMOS2 Projects"
+            Dim fileName As String = DefaultDirectory
             If My.Computer.FileSystem.DirectoryExists(fileName) = False Then
                 fileName = My.Computer.FileSystem.SpecialDirectories.MyDocuments
             End If

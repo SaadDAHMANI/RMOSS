@@ -283,6 +283,9 @@
     <EmbeddedResource Include="NeuralNetworks\AnnEoForm.resx">
       <DependentUpon>AnnEoForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NeuralNetworks\ANNsTimeSeriesForm.resx">
+      <DependentUpon>ANNsTimeSeriesForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NeuralNetworks\ANNTestForm.resx">
       <DependentUpon>ANNTestForm.vb</DependentUpon>
     </EmbeddedResource>

@@ -49,12 +49,12 @@ public class AnnTimeSeriesFomator
         DataSerie1D mTestingOutputs;
         public DataSerie1D Testing_Outputs
         { get { return mTestingOutputs; } }
-         
+
         /// <summary>
         /// Formate Training and Testing (inputs-outputs) by specific time series indexes. 
         /// </summary>
-        /// <param name="timeSeriesIndexes"></param>
-        public void Formate(DataSerie1D timeSeriesIndexes)
+        /// <param name="annInputModel"> The ANN input model </param>
+        public void Formate(DataSerie1D annInputModel)
         { 
         try
             {
@@ -63,10 +63,10 @@ public class AnnTimeSeriesFomator
                 int dataCount = Data.Count;
                 if (dataCount < 1) { return; }
 
-                if (object.Equals(timeSeriesIndexes , null)) { throw new Exception("No time series indexes pattern are found."); }
-                if (object.Equals(timeSeriesIndexes.Data, null)) { throw new Exception("No time series indexes pattern are found."); }
+                if (object.Equals(annInputModel, null)) { throw new Exception("No time series indexes pattern are found."); }
+                if (object.Equals(annInputModel.Data, null)) { throw new Exception("No time series indexes pattern are found."); }
 
-                if (timeSeriesIndexes.Max > dataCount) { throw new Exception("Index great then data serie count."); }
+                if (annInputModel.Max > dataCount) { throw new Exception("Index great then data serie count."); }
 
                 TrainingCount = (int)((TrainingRate * dataCount) / 100);
                 TestingCount = (dataCount - TrainingCount);
@@ -74,17 +74,45 @@ public class AnnTimeSeriesFomator
                 mTrainingInputs = new DataSerieTD() { Name = "Training inputs" };
                 mTrainingOutputs = new DataSerie1D() { Name = "Training outputs" };
 
-                timeSeriesIndexes.SortReverse();
+                int annInputCount = annInputModel.Count;
 
-                int[] indexes = new int[timeSeriesIndexes.Count]; 
+               int[] indexes = new int[annInputCount]; 
 
-                for (int i=0; i < timeSeriesIndexes.Count;i++)
+                for (int i=0; i < annInputCount; i++)
                 {
-                    indexes[i] = (int)timeSeriesIndexes.Data[i].X_Value;
+                    if (annInputModel.Data[i].X_Value>TrainingCount || annInputModel.Data[i].X_Value > TestingCount) 
+                    { throw new Exception("ANN Input indexes must be lower than Training and Testing data serie lenght."); }
+                    indexes[i] = (int)(annInputModel.Data[i].X_Value - 1);
                 }
 
-                
+                int indexMax = (indexes.Max() - 1);
 
+                for (int i = 0; i < (TrainingCount - indexMax); i++)
+                {
+                    double[] qj = new double[annInputCount];
+
+                    for (int j = 0; j < annInputCount; j++)
+                    {
+                        qj[j] = Data.Data[(i + indexes[j])].X_Value;
+                    }
+                    mTrainingInputs.Add(i.ToString(), qj);
+                    mTrainingOutputs.Add(i.ToString(), Data.Data[(i + indexMax)].X_Value);
+                }
+
+                mTestingInputs = new DataSerieTD() { Name = "Testing inputs" };
+                mTestingOutputs = new DataSerie1D() { Name = "Testing outputs" };
+                int k = TrainingCount;
+
+                for (int i = 0; i < (TestingCount - indexMax); i++)
+                {
+                    double[] qj = new double[annInputCount];
+                    for (int j = 0; j < annInputCount; j++)
+                    {
+                        qj[j] = Data.Data[(k + i + indexes[j])].X_Value;
+                    }
+                    mTestingInputs.Add((i + k).ToString(), qj);
+                    mTestingOutputs.Add((i + k).ToString(), Data.Data[(k + i + indexMax)].X_Value);
+                }
 
             }
             catch (Exception ex) { throw ex; }
@@ -115,8 +143,8 @@ public class AnnTimeSeriesFomator
                 mTrainingOutputs.Add(i.ToString(), Data.Data[(i + mAnnInputLayerCount)].X_Value);
             }
 
-            mTestingInputs = new DataSerieTD() { Name = "Testing inputs" }; ;
-            mTestingOutputs = new DataSerie1D() { Name = "Testing outputs" }; ;
+            mTestingInputs = new DataSerieTD() { Name = "Testing inputs" }; 
+            mTestingOutputs = new DataSerie1D() { Name = "Testing outputs" };
             int k = TrainingCount;
 
             for (int i = 0; i < (TestingCount - mAnnInputLayerCount); i++)
