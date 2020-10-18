@@ -22,6 +22,7 @@
     Friend NeuralNetwoksFrm As NeuralNetworkForm
     Friend AnnTestFrm As ANNTestForm
     Friend AnnEoaFrm As AnnEoForm
+    Friend AnnTimeSeriesFrm As ANNsTimeSeriesForm
 
 #End Region
 
@@ -494,6 +495,11 @@
 
     Private Sub TsmPerformance_Click(sender As Object, e As EventArgs) Handles TsmPerformance.Click
 
+    End Sub
+
+    Private Sub TsmiANN4TimeSeries_Click(sender As Object, e As EventArgs) Handles TsmiANN4TimeSeries.Click
+        AnnTimeSeriesFrm = New ANNsTimeSeriesForm()
+        Show_Window(CType(AnnTimeSeriesFrm, Form))
     End Sub
 
 #End Region

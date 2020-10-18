@@ -24,20 +24,20 @@ Partial Class MainForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
-        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Reservoir Configuration")
-        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Evaporation")
-        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Infiltration")
-        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Reservoir", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2, TreeNode3})
-        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Inflows")
-        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Demand Model")
-        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Data Series", New System.Windows.Forms.TreeNode() {TreeNode5, TreeNode6})
-        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Genetic Algorithm ")
-        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Gravitational Search Algorithm")
-        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Grey Wolf Optimizer")
-        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Optimization", New System.Windows.Forms.TreeNode() {TreeNode8, TreeNode9, TreeNode10})
-        Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Performance")
-        Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Comparaison")
-        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Performance Analysis", New System.Windows.Forms.TreeNode() {TreeNode12, TreeNode13})
+        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Reservoir Configuration")
+        Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Evaporation")
+        Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Infiltration")
+        Dim TreeNode18 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Reservoir", New System.Windows.Forms.TreeNode() {TreeNode15, TreeNode16, TreeNode17})
+        Dim TreeNode19 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Inflows")
+        Dim TreeNode20 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Demand Model")
+        Dim TreeNode21 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Data Series", New System.Windows.Forms.TreeNode() {TreeNode19, TreeNode20})
+        Dim TreeNode22 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Genetic Algorithm ")
+        Dim TreeNode23 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Gravitational Search Algorithm")
+        Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Grey Wolf Optimizer")
+        Dim TreeNode25 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Optimization", New System.Windows.Forms.TreeNode() {TreeNode22, TreeNode23, TreeNode24})
+        Dim TreeNode26 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Performance")
+        Dim TreeNode27 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Comparaison")
+        Dim TreeNode28 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Performance Analysis", New System.Windows.Forms.TreeNode() {TreeNode26, TreeNode27})
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MnuFile = New System.Windows.Forms.ToolStripMenuItem()
         Me.TsmiNewProject = New System.Windows.Forms.ToolStripMenuItem()
@@ -117,6 +117,8 @@ Partial Class MainForm
         Me.CxtMnuNewInflowSerie = New System.Windows.Forms.ToolStripMenuItem()
         Me.CxtMnuNewDemand = New System.Windows.Forms.ToolStripMenuItem()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
+        Me.TsmiANN4TimeSeries = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -413,7 +415,7 @@ Partial Class MainForm
         '
         'TsmForecasting
         '
-        Me.TsmForecasting.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TsmiNeuralNetwork, Me.ToolStripSeparator11, Me.TsmiNeuralNetEOA})
+        Me.TsmForecasting.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TsmiNeuralNetwork, Me.ToolStripSeparator11, Me.TsmiNeuralNetEOA, Me.ToolStripSeparator7, Me.TsmiANN4TimeSeries})
         Me.TsmForecasting.Name = "TsmForecasting"
         Me.TsmForecasting.ShowShortcutKeys = False
         Me.TsmForecasting.Size = New System.Drawing.Size(80, 20)
@@ -684,35 +686,35 @@ Partial Class MainForm
         Me.MainTreeView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MainTreeView.Location = New System.Drawing.Point(0, 0)
         Me.MainTreeView.Name = "MainTreeView"
-        TreeNode1.Name = "NdReservoirConfig"
-        TreeNode1.Text = "Reservoir Configuration"
-        TreeNode2.Name = "NdEvaporationSeries"
-        TreeNode2.Text = "Evaporation"
-        TreeNode3.Name = "NdInfiltrationSeries"
-        TreeNode3.Text = "Infiltration"
-        TreeNode4.Name = "NdReservoir"
-        TreeNode4.Text = "Reservoir"
-        TreeNode5.Name = "NdInflows"
-        TreeNode5.Text = "Inflows"
-        TreeNode6.Name = "NdDemands"
-        TreeNode6.Text = "Demand Model"
-        TreeNode7.Name = "NdDataSeries"
-        TreeNode7.Text = "Data Series"
-        TreeNode8.Name = "NdGeneticAlgo"
-        TreeNode8.Text = "Genetic Algorithm "
-        TreeNode9.Name = "NdGSAlog"
-        TreeNode9.Text = "Gravitational Search Algorithm"
-        TreeNode10.Name = "NdGWOAlgo"
-        TreeNode10.Text = "Grey Wolf Optimizer"
-        TreeNode11.Name = "NdOptimization"
-        TreeNode11.Text = "Optimization"
-        TreeNode12.Name = "NdPerformanceIndxs"
-        TreeNode12.Text = "Performance"
-        TreeNode13.Name = "NdComparaison"
-        TreeNode13.Text = "Comparaison"
-        TreeNode14.Name = "NdPerformanceAnalysis"
-        TreeNode14.Text = "Performance Analysis"
-        Me.MainTreeView.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode7, TreeNode11, TreeNode14})
+        TreeNode15.Name = "NdReservoirConfig"
+        TreeNode15.Text = "Reservoir Configuration"
+        TreeNode16.Name = "NdEvaporationSeries"
+        TreeNode16.Text = "Evaporation"
+        TreeNode17.Name = "NdInfiltrationSeries"
+        TreeNode17.Text = "Infiltration"
+        TreeNode18.Name = "NdReservoir"
+        TreeNode18.Text = "Reservoir"
+        TreeNode19.Name = "NdInflows"
+        TreeNode19.Text = "Inflows"
+        TreeNode20.Name = "NdDemands"
+        TreeNode20.Text = "Demand Model"
+        TreeNode21.Name = "NdDataSeries"
+        TreeNode21.Text = "Data Series"
+        TreeNode22.Name = "NdGeneticAlgo"
+        TreeNode22.Text = "Genetic Algorithm "
+        TreeNode23.Name = "NdGSAlog"
+        TreeNode23.Text = "Gravitational Search Algorithm"
+        TreeNode24.Name = "NdGWOAlgo"
+        TreeNode24.Text = "Grey Wolf Optimizer"
+        TreeNode25.Name = "NdOptimization"
+        TreeNode25.Text = "Optimization"
+        TreeNode26.Name = "NdPerformanceIndxs"
+        TreeNode26.Text = "Performance"
+        TreeNode27.Name = "NdComparaison"
+        TreeNode27.Text = "Comparaison"
+        TreeNode28.Name = "NdPerformanceAnalysis"
+        TreeNode28.Text = "Performance Analysis"
+        Me.MainTreeView.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode18, TreeNode21, TreeNode25, TreeNode28})
         Me.MainTreeView.Size = New System.Drawing.Size(139, 288)
         Me.MainTreeView.TabIndex = 1
         '
@@ -750,6 +752,17 @@ Partial Class MainForm
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(139, 42)
         Me.TextBox1.TabIndex = 2
+        '
+        'ToolStripSeparator7
+        '
+        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(200, 6)
+        '
+        'TsmiANN4TimeSeries
+        '
+        Me.TsmiANN4TimeSeries.Name = "TsmiANN4TimeSeries"
+        Me.TsmiANN4TimeSeries.Size = New System.Drawing.Size(203, 26)
+        Me.TsmiANN4TimeSeries.Text = "ANN - Time Series"
         '
         'MainForm
         '
@@ -867,4 +880,6 @@ Partial Class MainForm
     Friend WithEvents TsmiNeuralNetEOA As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator12 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator13 As ToolStripSeparator
+    Friend WithEvents ToolStripSeparator7 As ToolStripSeparator
+    Friend WithEvents TsmiANN4TimeSeries As ToolStripMenuItem
 End Class
