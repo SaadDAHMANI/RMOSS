@@ -699,7 +699,7 @@ namespace ForecastingEngine
                         AnnEo.TeachingError = positions[3];
                         AnnEo.MaxIterationCount = (int)positions[4];
 
-                        hidenLayerCount = (int)positions[5];
+                        hidenLayerCount =Math.Max((int)positions[5],1);
 
                         if (hidenLayerCount > 0)
                         {                            
@@ -708,7 +708,7 @@ namespace ForecastingEngine
 
                             for (int j = 0; j < hidenLayerCount; j++)
                             {
-                                networkStruct[j] = (int)positions[(j + 6)];
+                                networkStruct[j] = Math.Max((int)positions[(j + 6)],1);
                             }
                             for (int k = (hidenLayerCount + 6); k < positions.Length; k++)
                             { positions[k] = 0; }
@@ -727,7 +727,7 @@ namespace ForecastingEngine
                         AnnEo.TeachingError = positions[3];
                         AnnEo.MaxIterationCount = (int)positions[4];
 
-                        hidenLayerCount = (int)positions[5];
+                        hidenLayerCount = Math.Max((int)positions[5],1);
 
                         if (hidenLayerCount > 0)
                         {
@@ -736,7 +736,7 @@ namespace ForecastingEngine
 
                             for (int j = 0; j < hidenLayerCount; j++)
                             {
-                                networkStruct[j] = (int)positions[(j + 6)];
+                                networkStruct[j] =Math.Max((int)positions[(j + 6)],1);
                             }
                             for (int k = (hidenLayerCount + 6); k < positions.Length; k++)
                             { positions[k] = 0; }
@@ -882,7 +882,9 @@ namespace ForecastingEngine
                 double[] result = new double[count];
                 for(int i=0; i<count; i++)
                 {
-                    result[i] = dataset[i][0];
+                    if (Equals(dataset[i], null)) { return null;}
+                    else { result[i] = dataset[i][0]; }
+                    
                 }
                 return result;
             }
@@ -917,12 +919,18 @@ namespace ForecastingEngine
 
                     // Compute testing error (for fitness computing)
                     var testingOut = GetFirstColumn(AnnEo.Compute(this.Obs_Testing_Inputs));
-                    double testingFitness = PerformanceMesure.Compute_Nash_Sutcliffe_Efficiency(testingOut, mObs_Testing_Outputs);
-                    //-----------------------------------------------------------------------------------------
 
+                    double testingFitness = 2;
+                    if (!Equals(testingOut, null))
+                    {
+                         testingFitness = PerformanceMesure.Compute_DeterminationCoeff_R2(testingOut, mObs_Testing_Outputs);
+                    }
+                                                           
+                    //-----------------------------------------------------------------------------------------
+                    Debug.Print("Testing R2 = {0}", testingFitness);
                     //fitnessValue = AnnEo.FinalTeachingError;
 
-                    fitnessValue = ((0.01 * (AnnEo.LayersStruct.Length - 1)) + 1) * (AnnEo.FinalTeachingError + (1/testingFitness));
+                    fitnessValue = ((0.01 * (AnnEo.LayersStruct.Length - 1)) + 1) * (AnnEo.FinalTeachingError + Math.Abs(1- testingFitness));
                     
                     if (fitnessValue < BestComputedErr)
                     {
