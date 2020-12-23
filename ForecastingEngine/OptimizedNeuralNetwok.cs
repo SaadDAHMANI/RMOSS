@@ -837,6 +837,7 @@ namespace ForecastingEngine
                 SetLearningAlgoParams(ref positions);
 
                 AnnEo.LuanchLearning();
+                //AnnEo.Compute()
              
                 gene.CurrentFitness = ((0.01 * (AnnEo.LayersStruct.Length - 1)) + 1) * (1 / AnnEo.FinalTeachingError);
 

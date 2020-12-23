@@ -85,7 +85,7 @@ Namespace GeneticAlgorithm
         <Description("Genomes count limit in iterations.")> Public Property PopulationLimit As Integer
             Get
                 Return kPopulationLimit
-            End Get
+            End Get       
             Set(value As Integer)
                 If value > 2 Then
                     kPopulationLimit = value
