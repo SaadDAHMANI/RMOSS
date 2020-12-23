@@ -300,6 +300,7 @@ namespace IOOperations.Components
             double[] result = null;
             if (object.Equals(Data, null)) { return null; }
             int iCount = this.Data.Count;
+            result = new double[iCount];
             for (int i = 0; i < iCount; i++)
             {               
                 result[i] = Data[i].X_Value;

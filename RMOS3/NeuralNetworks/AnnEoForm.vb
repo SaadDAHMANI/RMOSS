@@ -400,6 +400,7 @@ Public Class AnnEoForm
                 .Obs_TrainingInputs = AnnDataFormator.Training_Inputs
                 .Obs_TrainingOutputs = AnnDataFormator.Training_Outputs
                 .Obs_TestingInputs = AnnDataFormator.Testing_Inputs
+                .Obs_TestingOutputs = AnnDataFormator.Testing_Outputs
 
                 '-------Computation----------------
                 .Compute()

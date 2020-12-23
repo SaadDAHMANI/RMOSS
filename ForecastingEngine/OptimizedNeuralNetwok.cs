@@ -151,6 +151,17 @@ namespace ForecastingEngine
                 }
             }
 
+            DataSerie1D mObs_TestingOutputs;
+            public DataSerie1D Obs_TestingOutputs
+            {
+                get { return mObs_TestingOutputs;}
+                set 
+                {
+                    mObs_TestingOutputs = value;
+                    mObs_Testing_Outputs = value.GetArray1D();
+                }
+            }
+
            // DataSerieTD mTestingOutputs;
             public DataSerie1D ComputedTestingOutputs
             {
@@ -203,6 +214,14 @@ namespace ForecastingEngine
                 get { return mObs_Testing_Inputs; }
                 //set { mTraining_Inputs = value; }
             }
+
+            double[] mObs_Testing_Outputs;
+            double[] Obs_Testing_Outputs
+            {
+                get { return mObs_Testing_Outputs; }
+                //set { mTraining_Inputs = value; }
+            }
+
 
             double[][] mComputed_Testing_Outputs;
             double[][] Computed_Testing_Outputs
@@ -835,17 +854,37 @@ namespace ForecastingEngine
                 AnnEo.Training_Outputs = this.Obs_Training_Outputs;
 
                 SetLearningAlgoParams(ref positions);
+                // Compute learning error (for fitness computing)
+                 AnnEo.LuanchLearning();
 
-                AnnEo.LuanchLearning();
-                //AnnEo.Compute()
-             
-                gene.CurrentFitness = ((0.01 * (AnnEo.LayersStruct.Length - 1)) + 1) * (1 / AnnEo.FinalTeachingError);
+                // Compute testing error (for fitness computing)
+                var testingOut = GetFirstColumn(AnnEo.Compute(this.Obs_Testing_Inputs));
+                double testingFitness = PerformanceMesure.Compute_Nash_Sutcliffe_Efficiency(testingOut, mObs_Testing_Outputs);
+                //-----------------------------------------------------------------------------------------
+
+                //gene.CurrentFitness = ((0.01 * (AnnEo.LayersStruct.Length - 1)) + 1) * (1 / AnnEo.FinalTeachingError);
+
+                gene.CurrentFitness = ((0.01 * (AnnEo.LayersStruct.Length - 1)) + 1) * ((1 / AnnEo.FinalTeachingError)+ testingFitness);
+
 
                 if (gene.CurrentFitness < BestComputedErr)
                 {
                     BestComputedErr = gene.CurrentFitness;
                     BestNeuralNetwork = AnnEo;
                 }                
+            }
+
+
+           public static double[] GetFirstColumn(double[][] dataset)
+            {
+                if (Equals(dataset, null)) { return null;}
+                int count = dataset.Length;
+                double[] result = new double[count];
+                for(int i=0; i<count; i++)
+                {
+                    result[i] = dataset[i][0];
+                }
+                return result;
             }
 
             /// <summary>
@@ -875,11 +914,15 @@ namespace ForecastingEngine
                     SetLearningAlgoParams(ref positions);
 
                     AnnEo.LuanchLearning();
-                    //positions[2]= AnnEo.TeachingError  ;
-                    //positions[3]=AnnEo.MaxIterationCount;
+
+                    // Compute testing error (for fitness computing)
+                    var testingOut = GetFirstColumn(AnnEo.Compute(this.Obs_Testing_Inputs));
+                    double testingFitness = PerformanceMesure.Compute_Nash_Sutcliffe_Efficiency(testingOut, mObs_Testing_Outputs);
+                    //-----------------------------------------------------------------------------------------
 
                     //fitnessValue = AnnEo.FinalTeachingError;
-                    fitnessValue = ((0.01 * (AnnEo.LayersStruct.Length - 1)) + 1) * AnnEo.FinalTeachingError;
+
+                    fitnessValue = ((0.01 * (AnnEo.LayersStruct.Length - 1)) + 1) * (AnnEo.FinalTeachingError + (1/testingFitness));
                     
                     if (fitnessValue < BestComputedErr)
                     {
