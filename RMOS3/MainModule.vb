@@ -13,7 +13,7 @@ Module MainModule
     Friend GWO_Engine As RmosEngine.GreyWolfOptimizer.GWOEngine
     Friend HPSOGWO_Engine As RmosEngine.GreyWolfOptimizer.HybridPSOGWOEngine
 
-    Friend DefaultDirectory As String = "G:\Streamflow_Data" 'My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\RMOS2 Projects"
+    Friend DefaultDirectory As String = "F:\VS19_Apps\RMOSS\RMOS3\LocalData" '"G:\Streamflow_Data" 'My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\RMOS2 Projects"
 
     Friend Enum FileFormatEnum
         CSV

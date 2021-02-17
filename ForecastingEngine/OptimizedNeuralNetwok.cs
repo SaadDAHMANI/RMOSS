@@ -821,14 +821,31 @@ namespace ForecastingEngine
                 SetLearningAlgoParams(ref positions);
 
                 AnnEo.LuanchLearning();
-                
+
+                // Compute testing error (for fitness computing)
+                var testingOut = GetFirstColumn(AnnEo.Compute(this.Obs_Testing_Inputs));
+
+                double testingFitness = -2;
+                if (!Equals(testingOut, null))
+                {
+                    testingFitness = PerformanceMesure.Compute_DeterminationCoeff_R2(testingOut, mObs_Testing_Outputs);
+                    if (Double.IsInfinity(testingFitness)) { testingFitness = -2; }
+                }
+
+                //-----------------------------------------------------------------------------------------
+                Debug.Print("Testing R2 = {0}", testingFitness);
+                //fitnessValue = AnnEo.FinalTeachingError;
+
+                fitnessValue = ((0.01 * (AnnEo.LayersStruct.Length - 1)) + 1) * (AnnEo.FinalTeachingError + Math.Abs(1 - testingFitness));
+
+
                 //Objectve function without penality:
                 //fitnessValue = AnnEo.FinalTeachingError;
 
                 //Objectve function with penality :
-                fitnessValue =((0.01*(AnnEo.LayersStruct.Length - 1))+1)* AnnEo.FinalTeachingError ;
+                //fitnessValue = ((0.01*(AnnEo.LayersStruct.Length - 1))+1)* AnnEo.FinalTeachingError ;
 
-                if (fitnessValue < BestComputedErr)
+                if (fitnessValue < BestComputedErr) 
                 {
                     BestComputedErr = fitnessValue;
                     BestNeuralNetwork = AnnEo;
@@ -920,10 +937,11 @@ namespace ForecastingEngine
                     // Compute testing error (for fitness computing)
                     var testingOut = GetFirstColumn(AnnEo.Compute(this.Obs_Testing_Inputs));
 
-                    double testingFitness = 2;
+                    double testingFitness = -2;
                     if (!Equals(testingOut, null))
                     {
                          testingFitness = PerformanceMesure.Compute_DeterminationCoeff_R2(testingOut, mObs_Testing_Outputs);
+                        if (Double.IsInfinity(testingFitness)) { testingFitness = -2; }
                     }
                                                            
                     //-----------------------------------------------------------------------------------------

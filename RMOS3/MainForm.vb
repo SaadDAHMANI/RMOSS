@@ -37,6 +37,7 @@
     End Sub
 
     Private Sub TsmExit_Click(sender As Object, e As EventArgs) Handles TsmExit.Click
+        Application.ExitThread()
         End
     End Sub
 
@@ -312,7 +313,8 @@
 
         Dim result As Boolean = False
         Try
-            Dim fileName As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\RMOS2 Projects"
+            Dim fileName As String = MainModule.DefaultDirectory
+
             If My.Computer.FileSystem.DirectoryExists(fileName) = False Then
                 fileName = My.Computer.FileSystem.SpecialDirectories.MyDocuments
             End If
